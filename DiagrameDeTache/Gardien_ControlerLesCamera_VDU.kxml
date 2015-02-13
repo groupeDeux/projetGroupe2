@@ -195,11 +195,11 @@
                 <task-name>SelectionerCameraAControler</task-name>
                 <task-numero>2.1</task-numero>
                 <task-observation/>
-                <task-executant>INT</task-executant>
+                <task-executant>ABS</task-executant>
                 <task-modality>COGN</task-modality>
                 <task-optional>false</task-optional>
                 <task-interruptible>false</task-interruptible>
-                <task-decomposition>LEAF</task-decomposition>
+                <task-decomposition>SEQ</task-decomposition>
                 <task-precondition>true</task-precondition>
                 <task-descriptionprecondition>Identification effectuer</task-descriptionprecondition>
                 <task-effetsdebord>void</task-effetsdebord>
@@ -238,7 +238,7 @@
                         <task-effetsdebord>void</task-effetsdebord>
                         <task-iteration>[1]</task-iteration>
                         <point classkmad="tache.Point" idkmad="K33">
-                            <point-x>825</point-x>
+                            <point-x>816</point-x>
                             <point-y>580</point-y>
                         </point>
                     </task>
@@ -264,7 +264,7 @@
                     <task-name>ValiderChoixCamera</task-name>
                     <task-numero>2.1.2</task-numero>
                     <task-observation/>
-                    <task-executant>SYS</task-executant>
+                    <task-executant>INT</task-executant>
                     <task-modality>COGN</task-modality>
                     <task-optional>false</task-optional>
                     <task-interruptible>false</task-interruptible>

@@ -7,7 +7,7 @@
         </projectinformation>
     </project>
     <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K7 K16 K43 K46 K49 " idkmad="K4">
-        <task-name>Remise resultats officiel</task-name>
+        <task-name>RemiseResultatsOfficiel</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
         <task-executant>ABS</task-executant>
@@ -19,8 +19,8 @@
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
         <point classkmad="tache.Point" idkmad="K3">
-            <point-x>1275</point-x>
-            <point-y>134</point-y>
+            <point-x>1282</point-x>
+            <point-y>131</point-y>
         </point>
         <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K10 K13 " idkmad="K7">
             <task-name>ConnexionSiteCyberCompetition</task-name>
@@ -91,7 +91,7 @@
                 <point-y>359</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K33" id-task-subtasks-list="K22 K31 " idkmad="K34">
-                <task-name>ClasserEquipes</task-name>
+                <task-name>VerifierClassement</task-name>
                 <task-numero>2.1</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
@@ -103,7 +103,7 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K33">
-                    <point-x>749</point-x>
+                    <point-x>746</point-x>
                     <point-y>519</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K21" idkmad="K22">
@@ -119,12 +119,12 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K21">
-                        <point-x>517</point-x>
-                        <point-y>783</point-y>
+                        <point-x>575</point-x>
+                        <point-y>729</point-y>
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K30" idkmad="K31">
-                    <task-name>CreationClassementOfficiel</task-name>
+                    <task-name>ValiderClassementGeneral</task-name>
                     <task-numero>2.1.2</task-numero>
                     <task-observation/>
                     <task-executant>INT</task-executant>
@@ -136,8 +136,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K30">
-                        <point-x>874</point-x>
-                        <point-y>783</point-y>
+                        <point-x>877</point-x>
+                        <point-y>729</point-y>
                     </point>
                 </task>
             </task>
@@ -251,7 +251,7 @@
             <task-observation/>
             <task-executant>INT</task-executant>
             <task-modality>COGN</task-modality>
-            <task-optional>true</task-optional>
+            <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>
             <task-decomposition>LEAF</task-decomposition>
             <task-precondition>true</task-precondition>
