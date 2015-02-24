@@ -22,7 +22,7 @@
             <task-name>LancerCyberCompetition</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
-            <task-executant>INT</task-executant>
+            <task-executant>USER</task-executant>
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>
@@ -31,7 +31,7 @@
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K6">
-                <point-x>48</point-x>
+                <point-x>49</point-x>
                 <point-y>234</point-y>
             </point>
         </task>
@@ -56,7 +56,7 @@
             <task-name>SelectionnerEpreuve</task-name>
             <task-numero>3</task-numero>
             <task-observation/>
-            <task-executant>USER</task-executant>
+            <task-executant>INT</task-executant>
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>
@@ -65,8 +65,8 @@
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K48">
-                <point-x>433</point-x>
-                <point-y>234</point-y>
+                <point-x>423</point-x>
+                <point-y>204</point-y>
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K24" id-task-subtasks-list="K43 K46 K52 K19 " idkmad="K25">
@@ -81,6 +81,7 @@
             <task-precondition>true</task-precondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
+            <task-descriptioniteration>tant que Epreuve a Ajouter</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K24">
                 <point-x>623</point-x>
                 <point-y>204</point-y>
@@ -98,8 +99,8 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K42">
-                    <point-x>119</point-x>
-                    <point-y>427</point-y>
+                    <point-x>101</point-x>
+                    <point-y>398</point-y>
                 </point>
             </task>
             <task classkmad="tache.Tache" id-task-point="K45" idkmad="K46">
@@ -116,7 +117,7 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K45">
-                    <point-x>295</point-x>
+                    <point-x>306</point-x>
                     <point-y>398</point-y>
                 </point>
             </task>
@@ -139,7 +140,7 @@ choisir passage</task-descriptioniteration>
                     <point-y>369</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K63" id-task-subtasks-list="K55 K58 " idkmad="K64">
-                    <task-name>ChoixParticipant</task-name>
+                    <task-name>ChoisirParticipant</task-name>
                     <task-numero>4.3.1</task-numero>
                     <task-observation/>
                     <task-executant>INT</task-executant>
@@ -246,7 +247,7 @@ choisir passage</task-descriptioniteration>
             <task-name>SeDeconnecter</task-name>
             <task-numero>6</task-numero>
             <task-observation/>
-            <task-executant>USER</task-executant>
+            <task-executant>INT</task-executant>
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>

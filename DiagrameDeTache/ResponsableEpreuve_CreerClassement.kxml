@@ -23,10 +23,10 @@
             <point-y>21</point-y>
         </point>
         <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K10 K13 " idkmad="K7">
-            <task-name>AccederSiteCybeCompetion</task-name>
+            <task-name>AccederSiteCyberCompetion</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
-            <task-executant>INT</task-executant>
+            <task-executant>ABS</task-executant>
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>

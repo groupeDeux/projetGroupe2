@@ -7,7 +7,7 @@
         </projectinformation>
     </project>
     <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K7 K66 K69 " idkmad="K4">
-        <task-name>ControlerLesCameras</task-name>
+        <task-name>ControlerCameras</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
         <task-executant>ABS</task-executant>
@@ -336,7 +336,7 @@
             <task-name>ReagirAAnnomalie</task-name>
             <task-numero>3</task-numero>
             <task-observation/>
-            <task-executant>ABS</task-executant>
+            <task-executant>USER</task-executant>
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>
