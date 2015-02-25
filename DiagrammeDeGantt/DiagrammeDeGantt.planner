@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<project name="" company="" manager="" phase="" project-start="20150225T000000Z" mrproject-version="2" calendar="2">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Travaill&#xE9;" description="Un jour de travail normal"/>
+      <day-type id="1" name="Ch&#xF4;m&#xE9;" description="Un jour ch&#xF4;m&#xE9; normal"/>
+      <day-type id="2" name="Utiliser la base" description="Utilise un jour du calendrier de base"/>
+    </day-types>
+    <calendar id="1" name="D&#xE9;faut">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+      <calendar id="2" name="PI_G2">
+        <default-week mon="2" tue="2" wed="2" thu="2" fri="2" sat="2" sun="1"/>
+        <overridden-day-types>
+          <overridden-day-type id="0">
+            <interval start="0900" end="1200"/>
+            <interval start="1300" end="1730"/>
+          </overridden-day-type>
+        </overridden-day-types>
+        <days>
+          <day date="20150225" type="day-type" id="0"/>
+        </days>
+      </calendar>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="TacheContinue" note="" work="197856" start="20150225T000000Z" end="20150319T173000Z" work-start="20150225T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="MaintienQualit&#xE9;" note="" work="91800" duration="459000" start="20150225T000000Z" end="20150319T173000Z" work-start="20150225T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+      <task id="3" name="MaintienGlossaire" note="" work="75816" duration="421200" start="20150226T120000Z" end="20150319T173000Z" work-start="20150226T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <predecessors>
+          <predecessor id="1" predecessor-id="10" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="4" name="MaintienGrannt" note="" work="21060" duration="421200" start="20150226T120000Z" end="20150319T173000Z" work-start="20150226T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <predecessors>
+          <predecessor id="1" predecessor-id="14" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="5" name="SurveillanceTemp" note="" work="9180" duration="459000" start="20150225T000000Z" end="20150319T173000Z" work-start="20150225T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+    </task>
+    <task id="6" name="TacheAudit1" note="" work="542886" start="20150225T000000Z" end="20150302T173000Z" work-start="20150225T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="7" name="Reunion RPROJ1" note="" work="64800" start="20150225T000000Z" end="20150225T120000Z" work-start="20150225T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="8" name="PAQL" note="" work="46431" start="20150225T120000Z" end="20150227T144500Z" work-start="20150225T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="9" name="DiagrammeTache" note="" work="27000" start="20150225T120000Z" end="20150226T120000Z" work-start="20150225T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="10" name="RealisationGlossaireExigenceActeur" note="" work="54000" start="20150225T120000Z" end="20150226T120000Z" work-start="20150225T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="11" name="DiagrammeUML" note="" work="58950" start="20150225T120000Z" end="20150227T145820Z" work-start="20150225T120000Z" percent-complete="8" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+        <task id="12" name="UnePersonne" note="" work="25650" start="20150225T120000Z" end="20150226T114500Z" work-start="20150225T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="13" name="DeuxPersonnes" note="" work="33300" start="20150226T114500Z" end="20150227T145820Z" work-start="20150226T114500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="12" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="14" name="DiagrammeGrannt" note="" work="27000" start="20150225T120000Z" end="20150226T120000Z" work-start="20150225T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="15" name="DaseDeDonneTunelSSH" note="" work="14400" start="20150226T000000Z" end="20150226T110640Z" work-start="20150226T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20150226T000000Z"/>
+      </task>
+      <task id="16" name="DiapoAudit1" note="" work="37800" start="20150227T000000Z" end="20150302T120000Z" work-start="20150227T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20150227T000000Z"/>
+      </task>
+      <task id="17" name="PrepaLivraison" note="" work="50505" start="20150227T145820Z" end="20150227T173000Z" work-start="20150227T145820Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="8" type="FS"/>
+          <predecessor id="1" predecessor-id="9" type="FS"/>
+          <predecessor id="1" predecessor-id="10" type="FS"/>
+          <predecessor id="1" predecessor-id="11" type="FS"/>
+          <predecessor id="1" predecessor-id="14" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="18" name="PrepaAudit1" note="" work="118800" duration="19800" start="20150302T000000Z" end="20150302T153000Z" work-start="20150302T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="start-no-earlier-than" time="20150302T000000Z"/>
+      </task>
+      <task id="19" name="Audit1" note="" work="0" start="20150302T153000Z" end="20150302T153000Z" work-start="20150302T153000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="18" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="20" name="DebrifAudit + RepartitionTache" note="" work="43200" start="20150302T153000Z" end="20150302T173000Z" work-start="20150302T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="19" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="21" name="PrepaAudit2" note="" work="118800" duration="19800" start="20150311T000000Z" end="20150311T153000Z" work-start="20150311T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+      <constraint type="must-start-on" time="20150311T000000Z"/>
+    </task>
+    <task id="22" name="Audit2" note="" work="0" start="20150311T153000Z" end="20150311T153000Z" work-start="20150311T153000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="21" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="23" name="PrepaSoutenance" note="" work="118800" duration="19800" start="20150320T000000Z" end="20150320T153000Z" work-start="20150320T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+      <constraint type="must-start-on" time="20150320T000000Z"/>
+    </task>
+    <task id="24" name="Soutenance" note="" work="0" start="20150320T153000Z" end="20150320T153000Z" work-start="20150320T153000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="23" type="FS"/>
+      </predecessors>
+    </task>
+  </tasks>
+  <resource-groups default_group="1">
+    <group id="1" name="Developpeur" admin-name="" admin-phone="" admin-email=""/>
+    <group id="2" name="GardienDuTemps" admin-name="" admin-phone="" admin-email=""/>
+    <group id="3" name="ResponsableQualit&#xE9;" admin-name="" admin-phone="" admin-email=""/>
+    <group id="4" name="ChefDeProjet" admin-name="" admin-phone="" admin-email=""/>
+  </resource-groups>
+  <resources>
+    <resource group="4" id="1" name="Vianney DANJOU" short-name="VDU" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="2" name="Gaetan BUSATO" short-name="GBO" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="3" name="Guillaume CONTE " short-name="GCE" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="4" name="Agathe FURET" short-name="AFT" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="3" id="5" name=" Arbia MAGOURI" short-name="AMI" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="6" name="Andreea OPRISOR " short-name="AOR" type="1" units="0" email="" note="" std-rate="0"/>
+  </resources>
+  <allocations>
+    <allocation task-id="20" resource-id="1" units="100"/>
+    <allocation task-id="17" resource-id="1" units="92"/>
+    <allocation task-id="15" resource-id="1" units="92"/>
+    <allocation task-id="14" resource-id="1" units="100"/>
+    <allocation task-id="4" resource-id="1" units="5"/>
+    <allocation task-id="7" resource-id="1" units="100"/>
+    <allocation task-id="3" resource-id="1" units="3"/>
+    <allocation task-id="23" resource-id="1" units="100"/>
+    <allocation task-id="21" resource-id="1" units="100"/>
+    <allocation task-id="18" resource-id="1" units="100"/>
+    <allocation task-id="19" resource-id="1" units="100"/>
+    <allocation task-id="22" resource-id="1" units="100"/>
+    <allocation task-id="24" resource-id="1" units="100"/>
+    <allocation task-id="20" resource-id="2" units="100"/>
+    <allocation task-id="17" resource-id="2" units="97"/>
+    <allocation task-id="15" resource-id="2" units="97"/>
+    <allocation task-id="9" resource-id="2" units="100"/>
+    <allocation task-id="7" resource-id="2" units="100"/>
+    <allocation task-id="3" resource-id="2" units="3"/>
+    <allocation task-id="23" resource-id="2" units="100"/>
+    <allocation task-id="21" resource-id="2" units="100"/>
+    <allocation task-id="18" resource-id="2" units="100"/>
+    <allocation task-id="19" resource-id="2" units="100"/>
+    <allocation task-id="22" resource-id="2" units="100"/>
+    <allocation task-id="24" resource-id="2" units="100"/>
+    <allocation task-id="20" resource-id="3" units="100"/>
+    <allocation task-id="17" resource-id="3" units="97"/>
+    <allocation task-id="10" resource-id="3" units="100"/>
+    <allocation task-id="7" resource-id="3" units="100"/>
+    <allocation task-id="3" resource-id="3" units="3"/>
+    <allocation task-id="23" resource-id="3" units="100"/>
+    <allocation task-id="21" resource-id="3" units="100"/>
+    <allocation task-id="18" resource-id="3" units="100"/>
+    <allocation task-id="19" resource-id="3" units="100"/>
+    <allocation task-id="22" resource-id="3" units="100"/>
+    <allocation task-id="24" resource-id="3" units="100"/>
+    <allocation task-id="20" resource-id="4" units="100"/>
+    <allocation task-id="13" resource-id="4" units="95"/>
+    <allocation task-id="12" resource-id="4" units="98"/>
+    <allocation task-id="17" resource-id="4" units="95"/>
+    <allocation task-id="5" resource-id="4" units="2"/>
+    <allocation task-id="7" resource-id="4" units="100"/>
+    <allocation task-id="3" resource-id="4" units="3"/>
+    <allocation task-id="23" resource-id="4" units="100"/>
+    <allocation task-id="21" resource-id="4" units="100"/>
+    <allocation task-id="18" resource-id="4" units="100"/>
+    <allocation task-id="19" resource-id="4" units="100"/>
+    <allocation task-id="22" resource-id="4" units="100"/>
+    <allocation task-id="24" resource-id="4" units="100"/>
+    <allocation task-id="20" resource-id="5" units="100"/>
+    <allocation task-id="17" resource-id="5" units="77"/>
+    <allocation task-id="8" resource-id="5" units="77"/>
+    <allocation task-id="7" resource-id="5" units="100"/>
+    <allocation task-id="3" resource-id="5" units="3"/>
+    <allocation task-id="2" resource-id="5" units="20"/>
+    <allocation task-id="23" resource-id="5" units="100"/>
+    <allocation task-id="21" resource-id="5" units="100"/>
+    <allocation task-id="18" resource-id="5" units="100"/>
+    <allocation task-id="19" resource-id="5" units="100"/>
+    <allocation task-id="22" resource-id="5" units="100"/>
+    <allocation task-id="24" resource-id="5" units="100"/>
+    <allocation task-id="20" resource-id="6" units="100"/>
+    <allocation task-id="17" resource-id="6" units="97"/>
+    <allocation task-id="10" resource-id="6" units="100"/>
+    <allocation task-id="7" resource-id="6" units="100"/>
+    <allocation task-id="3" resource-id="6" units="3"/>
+    <allocation task-id="23" resource-id="6" units="100"/>
+    <allocation task-id="21" resource-id="6" units="100"/>
+    <allocation task-id="18" resource-id="6" units="100"/>
+    <allocation task-id="19" resource-id="6" units="100"/>
+    <allocation task-id="22" resource-id="6" units="100"/>
+    <allocation task-id="24" resource-id="6" units="100"/>
+  </allocations>
+</project>
