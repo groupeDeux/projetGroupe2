@@ -40,7 +40,7 @@
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K12" idkmad="K13">
-            <task-name>VerifierDroitAccer</task-name>
+            <task-name>VerifierDroitAcces</task-name>
             <task-numero>2</task-numero>
             <task-observation/>
             <task-executant>SYS</task-executant>
