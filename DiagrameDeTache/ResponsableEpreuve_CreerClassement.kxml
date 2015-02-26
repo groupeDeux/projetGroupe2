@@ -6,7 +6,7 @@
             <projectinformation-compagny>G2 PI</projectinformation-compagny>
         </projectinformation>
     </project>
-    <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K7 K13 K19 K16 K28 K31 " idkmad="K4">
+    <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K7 K43 K13 K19 K16 K28 K31 " idkmad="K4">
         <task-name>CreerClassement</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
@@ -26,7 +26,7 @@
             <task-name>SeConnecterACyberCompetion</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
-            <task-executant>INT</task-executant>
+            <task-executant>USER</task-executant>
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>
@@ -35,13 +35,30 @@
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K6">
-                <point-x>109</point-x>
+                <point-x>10</point-x>
+                <point-y>163</point-y>
+            </point>
+        </task>
+        <task classkmad="tache.Tache" id-task-point="K42" idkmad="K43">
+            <task-name>SIdentifier</task-name>
+            <task-numero>2</task-numero>
+            <task-observation/>
+            <task-executant>INT</task-executant>
+            <task-modality>COGN</task-modality>
+            <task-optional>false</task-optional>
+            <task-interruptible>false</task-interruptible>
+            <task-decomposition>LEAF</task-decomposition>
+            <task-precondition>true</task-precondition>
+            <task-effetsdebord>void</task-effetsdebord>
+            <task-iteration>[1]</task-iteration>
+            <point classkmad="tache.Point" idkmad="K42">
+                <point-x>271</point-x>
                 <point-y>163</point-y>
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K12" idkmad="K13">
             <task-name>VerifierDroitAcces</task-name>
-            <task-numero>2</task-numero>
+            <task-numero>3</task-numero>
             <task-observation/>
             <task-executant>SYS</task-executant>
             <task-modality>COGN</task-modality>
@@ -52,13 +69,13 @@
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K12">
-                <point-x>380</point-x>
+                <point-x>418</point-x>
                 <point-y>163</point-y>
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K18" idkmad="K19">
             <task-name>SelectionnerEpreuve</task-name>
-            <task-numero>3</task-numero>
+            <task-numero>4</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
             <task-modality>COGN</task-modality>
@@ -75,7 +92,7 @@
         </task>
         <task classkmad="tache.Tache" id-task-point="K15" id-task-subtasks-list="K22 K25 " idkmad="K16">
             <task-name>EntrerResultatSportif</task-name>
-            <task-numero>4</task-numero>
+            <task-numero>5</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
             <task-modality>COGN</task-modality>
@@ -92,7 +109,7 @@
             </point>
             <task classkmad="tache.Tache" id-task-point="K21" idkmad="K22">
                 <task-name>SelectionnerSportif</task-name>
-                <task-numero>4.1</task-numero>
+                <task-numero>5.1</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
                 <task-modality>COGN</task-modality>
@@ -109,7 +126,7 @@
             </task>
             <task classkmad="tache.Tache" id-task-point="K24" idkmad="K25">
                 <task-name>SaisirResultat</task-name>
-                <task-numero>4.2</task-numero>
+                <task-numero>5.2</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
                 <task-modality>COGN</task-modality>
@@ -127,7 +144,7 @@
         </task>
         <task classkmad="tache.Tache" id-task-point="K27" idkmad="K28">
             <task-name>CalculerClassement</task-name>
-            <task-numero>5</task-numero>
+            <task-numero>6</task-numero>
             <task-observation/>
             <task-executant>SYS</task-executant>
             <task-modality>COGN</task-modality>
@@ -144,7 +161,7 @@
         </task>
         <task classkmad="tache.Tache" id-task-point="K30" idkmad="K31">
             <task-name>ValiderClassement</task-name>
-            <task-numero>6</task-numero>
+            <task-numero>7</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
             <task-modality>COGN</task-modality>
