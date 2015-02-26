@@ -42,7 +42,7 @@
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K6" idkmad="K7">
-            <task-name>VisualiserDisciplines</task-name>
+            <task-name>SelectionnerDisciplines</task-name>
             <task-numero>2</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
@@ -60,7 +60,7 @@
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K42" idkmad="K43">
-            <task-name>VisualiserEpreuves</task-name>
+            <task-name>SelectionnerEpreuves</task-name>
             <task-numero>3</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
@@ -90,7 +90,7 @@
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K44">
-                <point-x>620</point-x>
+                <point-x>634</point-x>
                 <point-y>173</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K9" id-task-subtasks-list="K31 K28 " idkmad="K10">
