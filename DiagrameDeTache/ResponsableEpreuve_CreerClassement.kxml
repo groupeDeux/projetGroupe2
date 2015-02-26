@@ -23,7 +23,7 @@
             <point-y>21</point-y>
         </point>
         <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K10 K13 " idkmad="K7">
-            <task-name>AccederSiteCyberCompetion</task-name>
+            <task-name>SeConnecterACyberCompetion</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
             <task-executant>ABS</task-executant>
@@ -35,7 +35,7 @@
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K6">
-                <point-x>176</point-x>
+                <point-x>162</point-x>
                 <point-y>163</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K9" idkmad="K10">
