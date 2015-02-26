@@ -36,7 +36,7 @@
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K6">
                 <point-x>179</point-x>
-                <point-y>292</point-y>
+                <point-y>359</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K9" idkmad="K10">
                 <task-name>RentrerIdentifiantJury</task-name>
@@ -102,7 +102,6 @@
             <task-precondition>true</task-precondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
-            <task-descriptioniteration>Autant qu'il y a d'epreuves</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K15">
                 <point-x>1152</point-x>
                 <point-y>359</point-y>
@@ -170,7 +169,6 @@
                 <task-precondition>true</task-precondition>
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
-                <task-descriptioniteration>Bronze, Argent, Or</task-descriptioniteration>
                 <point classkmad="tache.Point" idkmad="K24">
                     <point-x>1531</point-x>
                     <point-y>519</point-y>
