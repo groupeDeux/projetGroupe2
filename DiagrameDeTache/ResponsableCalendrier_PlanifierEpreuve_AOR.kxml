@@ -2,7 +2,7 @@
 <!DOCTYPE kmad-model SYSTEM "file:KMADModelJT.dtd">
 <kmad-model version="1.2">
     <project classkmad="project.Project" idkmad="K1"/>
-    <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K7 K22 K49 K25 K28 " idkmad="K4">
+    <task classkmad="tache.Tache" id-task-actors-list="K80 " id-task-point="K3" id-task-subtasks-list="K7 K22 K49 K25 K28 " idkmad="K4">
         <task-name>PlanifierEpreuve</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
@@ -12,12 +12,16 @@
         <task-interruptible>false</task-interruptible>
         <task-decomposition>SEQ</task-decomposition>
         <task-precondition>true</task-precondition>
+        <task-descriptionprecondition>Incription Delgation OK</task-descriptionprecondition>
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
         <point classkmad="tache.Point" idkmad="K3">
             <point-x>533</point-x>
             <point-y>49</point-y>
         </point>
+        <actor classkmad="tache.Acteur" id-user="K79" idkmad="K80">
+            <actor-experience>UNK</actor-experience>
+        </actor>
         <task classkmad="tache.Tache" id-task-point="K6" idkmad="K7">
             <task-name>SeConnecterACyberCompetition</task-name>
             <task-numero>1</task-numero>
@@ -243,4 +247,8 @@ choisir passage</task-descriptioniteration>
             </point>
         </task>
     </task>
+    <Individu classkmad="tache.Individu" idkmad="K79">
+        <individu-name>xxx</individu-name>
+        <individu-role>ResponsableCalendrier</individu-role>
+    </Individu>
 </kmad-model>

@@ -8,7 +8,7 @@
             <projectinformation-date>04/02/2015</projectinformation-date>
         </projectinformation>
     </project>
-    <task classkmad="tache.Tache" id-task-point="K12" id-task-subtasks-list="K19 K7 K43 K45 K73 K48 K54 K129 K99 " idkmad="K13">
+    <task classkmad="tache.Tache" id-task-actors-list="K167 " id-task-point="K12" id-task-subtasks-list="K19 K7 K43 K45 K73 K48 K54 K129 K99 " idkmad="K13">
         <task-name>AcheterBillets</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
@@ -18,12 +18,16 @@
         <task-interruptible>false</task-interruptible>
         <task-decomposition>SEQ</task-decomposition>
         <task-precondition>true</task-precondition>
+        <task-descriptionprecondition>PlanifierEpreuve OK</task-descriptionprecondition>
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
         <point classkmad="tache.Point" idkmad="K12">
             <point-x>701</point-x>
             <point-y>15</point-y>
         </point>
+        <actor classkmad="tache.Acteur" id-user="K166" idkmad="K167">
+            <actor-experience>UNK</actor-experience>
+        </actor>
         <task classkmad="tache.Tache" id-task-point="K18" idkmad="K19">
             <task-name>SeConnecterACyberCompetition</task-name>
             <task-numero>1</task-numero>
@@ -426,4 +430,8 @@
             </point>
         </task>
     </task>
+    <Individu classkmad="tache.Individu" idkmad="K166">
+        <individu-name>xxx</individu-name>
+        <individu-role>pas De role Parsticulier</individu-role>
+    </Individu>
 </kmad-model>

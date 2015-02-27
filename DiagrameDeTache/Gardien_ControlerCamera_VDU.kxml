@@ -6,7 +6,7 @@
             <projectinformation-compagny>Competis</projectinformation-compagny>
         </projectinformation>
     </project>
-    <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K7 K66 K69 " idkmad="K4">
+    <task classkmad="tache.Tache" id-task-actors-list="K112 " id-task-point="K3" id-task-subtasks-list="K7 K66 K69 " idkmad="K4">
         <task-name>ControlerCameras</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
@@ -22,6 +22,9 @@
             <point-x>940</point-x>
             <point-y>0</point-y>
         </point>
+        <actor classkmad="tache.Acteur" id-user="K111" idkmad="K112">
+            <actor-experience>UNK</actor-experience>
+        </actor>
         <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K10 K13 " idkmad="K7">
             <task-name>SectionnerSupport</task-name>
             <task-numero>1</task-numero>
@@ -350,4 +353,8 @@
             </point>
         </task>
     </task>
+    <Individu classkmad="tache.Individu" idkmad="K111">
+        <individu-name>Gardien</individu-name>
+        <individu-role>Veiller a la Securité des Sites</individu-role>
+    </Individu>
 </kmad-model>

@@ -2,7 +2,7 @@
 <!DOCTYPE kmad-model SYSTEM "file:KMADModelJT.dtd">
 <kmad-model version="1.2">
     <project classkmad="project.Project" idkmad="K1"/>
-    <task classkmad="tache.Tache" id-task-point="K3" id-task-subtasks-list="K124 K127 K130 K92 K89 " idkmad="K4">
+    <task classkmad="tache.Tache" id-task-actors-list="K171 " id-task-point="K3" id-task-subtasks-list="K124 K127 K130 K92 K89 " idkmad="K4">
         <task-name>CréerCompétition</task-name>
         <task-numero>Racine   </task-numero>
         <task-observation/>
@@ -19,6 +19,9 @@
             <point-x>587</point-x>
             <point-y>6</point-y>
         </point>
+        <actor classkmad="tache.Acteur" id-user="K170" idkmad="K171">
+            <actor-experience>UNK</actor-experience>
+        </actor>
         <task classkmad="tache.Tache" id-task-point="K123" idkmad="K124">
             <task-name>SeConnecterACyberCompetition</task-name>
             <task-numero>1</task-numero>
@@ -189,7 +192,7 @@
                         <point-x>997</point-x>
                         <point-y>758</point-y>
                     </point>
-                    <task classkmad="tache.Tache" id-task-point="K150" id-task-subtasks-list="K19 " idkmad="K151">
+                    <task classkmad="tache.Tache" id-task-point="K150" id-task-subtasks-list="K19 K168 " idkmad="K151">
                         <task-name>DefinirEnTantQuEpreuveParEquipe</task-name>
                         <task-numero>5.2.3.1</task-numero>
                         <task-observation/>
@@ -197,16 +200,16 @@
                         <task-modality>COGN</task-modality>
                         <task-optional>false</task-optional>
                         <task-interruptible>false</task-interruptible>
-                        <task-decomposition>ENT</task-decomposition>
+                        <task-decomposition>SEQ</task-decomposition>
                         <task-precondition>true</task-precondition>
                         <task-effetsdebord>void</task-effetsdebord>
                         <task-iteration>[1]</task-iteration>
                         <point classkmad="tache.Point" idkmad="K150">
-                            <point-x>739</point-x>
+                            <point-x>748</point-x>
                             <point-y>906</point-y>
                         </point>
                         <task classkmad="tache.Tache" id-task-point="K18" idkmad="K19">
-                            <task-name>DéfinirNombreParticipantsParEquipe</task-name>
+                            <task-name>SaisieNombreParticipantsParEquipe</task-name>
                             <task-numero>5.2.3.1.1</task-numero>
                             <task-observation/>
                             <task-executant>INT</task-executant>
@@ -218,8 +221,25 @@
                             <task-effetsdebord>void</task-effetsdebord>
                             <task-iteration>[1]</task-iteration>
                             <point classkmad="tache.Point" idkmad="K18">
-                                <point-x>733</point-x>
-                                <point-y>1051</point-y>
+                                <point-x>621</point-x>
+                                <point-y>1032</point-y>
+                            </point>
+                        </task>
+                        <task classkmad="tache.Tache" id-task-point="K167" idkmad="K168">
+                            <task-name>ValiderNombreParticipantsParEquipe</task-name>
+                            <task-numero>5.2.3.1.2</task-numero>
+                            <task-observation/>
+                            <task-executant>INT</task-executant>
+                            <task-modality>COGN</task-modality>
+                            <task-optional>true</task-optional>
+                            <task-interruptible>false</task-interruptible>
+                            <task-decomposition>LEAF</task-decomposition>
+                            <task-precondition>true</task-precondition>
+                            <task-effetsdebord>void</task-effetsdebord>
+                            <task-iteration>[1]</task-iteration>
+                            <point classkmad="tache.Point" idkmad="K167">
+                                <point-x>958</point-x>
+                                <point-y>1032</point-y>
                             </point>
                         </task>
                     </task>
@@ -261,4 +281,8 @@
             </task>
         </task>
     </task>
+    <Individu classkmad="tache.Individu" idkmad="K170">
+        <individu-name>Marc</individu-name>
+        <individu-role>Administrateur</individu-role>
+    </Individu>
 </kmad-model>
