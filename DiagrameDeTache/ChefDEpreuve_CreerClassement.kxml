@@ -95,7 +95,7 @@
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K15" id-task-subtasks-list="K22 K25 " idkmad="K16">
-            <task-name>SaisirResultatSportif</task-name>
+            <task-name>SaisirResultatParticipant</task-name>
             <task-numero>5</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
@@ -112,7 +112,7 @@
                 <point-y>163</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K21" idkmad="K22">
-                <task-name>SelectionnerSportif</task-name>
+                <task-name>SelectionnerParticipant</task-name>
                 <task-numero>5.1</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
