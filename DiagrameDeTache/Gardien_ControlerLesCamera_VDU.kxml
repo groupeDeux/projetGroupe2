@@ -23,7 +23,7 @@
             <point-y>0</point-y>
         </point>
         <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K10 K13 " idkmad="K7">
-            <task-name>SectionnerSupport</task-name>
+            <task-name>SelectionnerSupport</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
             <task-executant>ABS</task-executant>
@@ -89,7 +89,7 @@
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K59" idkmad="K60">
-                    <task-name>VerifierIdenticication</task-name>
+                    <task-name>VerifierIdentification</task-name>
                     <task-numero>1.1.3</task-numero>
                     <task-observation/>
                     <task-executant>SYS</task-executant>
@@ -192,7 +192,7 @@
                 <point-y>145</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K27" id-task-subtasks-list="K48 K46 " idkmad="K28">
-                <task-name>SelectionerCameraAControler</task-name>
+                <task-name>SelectionnerCameraAControler</task-name>
                 <task-numero>2.1</task-numero>
                 <task-observation/>
                 <task-executant>ABS</task-executant>
@@ -226,7 +226,7 @@
                         <point-y>435</point-y>
                     </point>
                     <task classkmad="tache.Tache" id-task-point="K33" idkmad="K34">
-                        <task-name>SelectionerCameraAVisualiser</task-name>
+                        <task-name>SelectionnerCameraAVisualiser</task-name>
                         <task-numero>2.1.1.1</task-numero>
                         <task-observation/>
                         <task-executant>INT</task-executant>
@@ -314,7 +314,7 @@
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K56" idkmad="K57">
-                    <task-name>ZommerCamera</task-name>
+                    <task-name>ZoomerCamera</task-name>
                     <task-numero>2.2.2</task-numero>
                     <task-observation/>
                     <task-executant>INT</task-executant>
@@ -333,7 +333,7 @@
             </task>
         </task>
         <task classkmad="tache.Tache" id-task-point="K68" idkmad="K69">
-            <task-name>ReagirAAnnomalie</task-name>
+            <task-name>ReagirAAnomalie</task-name>
             <task-numero>3</task-numero>
             <task-observation/>
             <task-executant>USER</task-executant>
