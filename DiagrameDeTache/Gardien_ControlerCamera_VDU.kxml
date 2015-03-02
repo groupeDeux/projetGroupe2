@@ -355,6 +355,5 @@
     </task>
     <Individu classkmad="tache.Individu" idkmad="K111">
         <individu-name>Gardien</individu-name>
-        <individu-role>Veiller a la Securité des Sites</individu-role>
     </Individu>
 </kmad-model>
