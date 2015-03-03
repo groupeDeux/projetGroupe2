@@ -16,8 +16,8 @@
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
         <point classkmad="tache.Point" idkmad="K3">
-            <point-x>529</point-x>
-            <point-y>83</point-y>
+            <point-x>743</point-x>
+            <point-y>71</point-y>
         </point>
         <actor classkmad="tache.Acteur" id-user="K76" idkmad="K77">
             <actor-experience>UNK</actor-experience>
