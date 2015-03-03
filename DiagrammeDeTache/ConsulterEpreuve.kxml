@@ -40,7 +40,7 @@
             </point>
         </task>
         <task classkmad="tache.Tache" id-task-point="K39" id-task-subtasks-list="K43 K46 " idkmad="K40">
-            <task-name>SelectionnerInfoCompementaire</task-name>
+            <task-name>AffinerSelection</task-name>
             <task-numero>2</task-numero>
             <task-observation/>
             <task-executant>INT</task-executant>
@@ -74,7 +74,7 @@
                 </point>
             </task>
             <task classkmad="tache.Tache" id-task-point="K45" idkmad="K46">
-                <task-name>SelectionnerGenreEpreuve</task-name>
+                <task-name>SelectionnerCategorieEpreuve</task-name>
                 <task-numero>2.2</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
@@ -86,7 +86,7 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K45">
-                    <point-x>509</point-x>
+                    <point-x>493</point-x>
                     <point-y>355</point-y>
                 </point>
             </task>
@@ -126,7 +126,7 @@
                 </point>
             </task>
             <task classkmad="tache.Tache" id-task-point="K21" idkmad="K22">
-                <task-name>AfficherListeSportif</task-name>
+                <task-name>AfficherListeParticipant</task-name>
                 <task-numero>3.2</task-numero>
                 <task-observation/>
                 <task-executant>SYS</task-executant>
@@ -138,7 +138,7 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K21">
-                    <point-x>976</point-x>
+                    <point-x>966</point-x>
                     <point-y>355</point-y>
                 </point>
             </task>
