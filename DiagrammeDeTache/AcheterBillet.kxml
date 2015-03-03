@@ -23,7 +23,7 @@
             <point-x>876</point-x>
             <point-y>38</point-y>
         </point>
-        <task classkmad="tache.Tache" id-task-point="K9" id-task-subtasks-list="K7 K16 K19 K25 " idkmad="K10">
+        <task classkmad="tache.Tache" id-task-point="K9" id-task-subtasks-list="K7 K16 K97 K19 K25 " idkmad="K10">
             <task-name>AjouterBilletPanier</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
@@ -35,6 +35,7 @@
             <task-precondition>true</task-precondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
+            <task-descriptioniteration>Tant que la personne a besoin de billets</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K9">
                 <point-x>266</point-x>
                 <point-y>197</point-y>
@@ -73,9 +74,60 @@
                     <point-y>363</point-y>
                 </point>
             </task>
-            <task classkmad="tache.Tache" id-task-point="K18" idkmad="K19">
-                <task-name>SelectionnerNombreBillet</task-name>
+            <task classkmad="tache.Tache" id-task-point="K96" id-task-subtasks-list="K91 K94 " idkmad="K97">
+                <task-name>SelectionnerTypeBillet</task-name>
                 <task-numero>1.3</task-numero>
+                <task-observation/>
+                <task-executant>INT</task-executant>
+                <task-modality>COGN</task-modality>
+                <task-optional>false</task-optional>
+                <task-interruptible>false</task-interruptible>
+                <task-decomposition>ALT</task-decomposition>
+                <task-precondition>true</task-precondition>
+                <task-effetsdebord>void</task-effetsdebord>
+                <task-iteration>[1]</task-iteration>
+                <point classkmad="tache.Point" idkmad="K96">
+                    <point-x>304</point-x>
+                    <point-y>494</point-y>
+                </point>
+                <task classkmad="tache.Tache" id-task-point="K90" idkmad="K91">
+                    <task-name>SelectionnerTicketVideo</task-name>
+                    <task-numero>1.3.1</task-numero>
+                    <task-observation/>
+                    <task-executant>INT</task-executant>
+                    <task-modality>COGN</task-modality>
+                    <task-optional>false</task-optional>
+                    <task-interruptible>false</task-interruptible>
+                    <task-decomposition>LEAF</task-decomposition>
+                    <task-precondition>true</task-precondition>
+                    <task-effetsdebord>void</task-effetsdebord>
+                    <task-iteration>[1]</task-iteration>
+                    <point classkmad="tache.Point" idkmad="K90">
+                        <point-x>191</point-x>
+                        <point-y>642</point-y>
+                    </point>
+                </task>
+                <task classkmad="tache.Tache" id-task-point="K93" idkmad="K94">
+                    <task-name>SelectionnerBillet</task-name>
+                    <task-numero>1.3.2</task-numero>
+                    <task-observation/>
+                    <task-executant>INT</task-executant>
+                    <task-modality>COGN</task-modality>
+                    <task-optional>false</task-optional>
+                    <task-interruptible>false</task-interruptible>
+                    <task-decomposition>LEAF</task-decomposition>
+                    <task-precondition>true</task-precondition>
+                    <task-effetsdebord>void</task-effetsdebord>
+                    <task-iteration>[1]</task-iteration>
+                    <point classkmad="tache.Point" idkmad="K93">
+                        <point-x>423</point-x>
+                        <point-y>642</point-y>
+                    </point>
+                </task>
+            </task>
+            <task classkmad="tache.Tache" id-task-point="K18" idkmad="K19">
+                <task-name>SelectionnerNombre</task-name>
+                <task-numero>1.4</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
                 <task-modality>COGN</task-modality>
@@ -86,13 +138,13 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K18">
-                    <point-x>347</point-x>
+                    <point-x>418</point-x>
                     <point-y>363</point-y>
                 </point>
             </task>
             <task classkmad="tache.Tache" id-task-point="K24" idkmad="K25">
                 <task-name>Valider</task-name>
-                <task-numero>1.4</task-numero>
+                <task-numero>1.5</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
                 <task-modality>COGN</task-modality>
@@ -118,6 +170,7 @@
             <task-interruptible>false</task-interruptible>
             <task-decomposition>SEQ</task-decomposition>
             <task-precondition>true</task-precondition>
+            <task-descriptionprecondition>Il faut qu'il y ai au moins un billet dans le panier.</task-descriptionprecondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K12">
@@ -203,6 +256,7 @@
             <task-interruptible>false</task-interruptible>
             <task-decomposition>SEQ</task-decomposition>
             <task-precondition>true</task-precondition>
+            <task-descriptionprecondition>Il y a au moins un billet dans le panier</task-descriptionprecondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <point classkmad="tache.Point" idkmad="K37">
