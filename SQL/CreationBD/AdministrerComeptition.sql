@@ -22,16 +22,16 @@ Constraint LEp_C3 CHECK (dateDebut < DateFin)
 );
 
 CREATE TABLE LesEpreuvesIndividuelles (
-numEpreuve INTEGER,
-Constraint LEpInd_PK PRIMARY KEY (numEpreuve),
-Constraint LEpInd_FK1 FOREIGN KEY (numEpreuve) REFERENCES LesEpreuves(idEpreuve)
+idEpreuve INTEGER,
+Constraint LEpInd_PK PRIMARY KEY (idEpreuve),
+Constraint LEpInd_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 ); 
 
 CREATE TABLE LesEpreuvesParEquipe (
-numEpreuve INTEGER,
+idEpreuve INTEGER,
 nbPersonneFixe INTEGER,
-Constraint LEpEq_PK PRIMARY KEY (numEpreuve),
-Constraint LEpEq_FK1 FOREIGN KEY (numEpreuve) REFERENCES LesEpreuves(idEpreuve)
+Constraint LEpEq_PK PRIMARY KEY (nidEpreuve),
+Constraint LEpEq_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 ); 
 
 CREATE TABLE LesDelegations (
@@ -64,7 +64,7 @@ Constraint LCh_FK1 FOREIGN KEY (nomBatiment) REFERENCES LesBatiments(nomBatiment
 );
 
 CREATE TABLE LesSportifs (
-numSportif INTEGER,
+idSportif INTEGER,
 nom VARCHAR(30) NOT NULL,
 prenom VARCHAR(30) NOT NULL, 
 dateNaissance date NOT NULL,
@@ -72,25 +72,25 @@ genre VARCHAR(30),
 descriptionHandicap VARCHAR(30),
 numChambre VARCHAR(30),
 nomBatiment VARCHAR(30),
-Constraint LSp_PK PRIMARY KEY (numSportif),
-Constraint LSp_FK1 FOREIGN KEY (numSportif) REFERENCES LesParticipants(idParticipant),  
+Constraint LSp_PK PRIMARY KEY (idSportif),
+Constraint LSp_FK1 FOREIGN KEY (idSportif) REFERENCES LesParticipants(idParticipant),  
 Constraint LSp_FK2 FOREIGN KEY (numChambre,nomBatiment) REFERENCES LesChambres(numChambre, nomBatiment)
 );
 
 CREATE TABLE LesEquipes (
-numEquipe INTEGER,
+idEquipe INTEGER,
 nomEquipe VARCHAR(30),
 categorie VARCHAR(30) NOT NULL,
-Constraint LEq_PK PRIMARY KEY (numEquipe),
-Constraint LEq_FK1 FOREIGN KEY (numEquipe) REFERENCES LesParticipants(idParticipant)
+Constraint LEq_PK PRIMARY KEY (idEquipe),
+Constraint LEq_FK1 FOREIGN KEY (idEquipe) REFERENCES LesParticipants(idParticipant)
 );
 
 CREATE TABLE LesConstitutionsEquipe (
-numEquipe INTEGER, 
-numSportif INTEGER,
-Constraint CEq_PK PRIMARY KEY (numEquipe,numSportif),
-Constraint CEq_FK1 FOREIGN KEY (numEquipe) REFERENCES LesEquipes(numEquipe),
-Constraint CEq_FK2 FOREIGN KEY (numSportif) REFERENCES LesSportifs(numSportif)
+idEquipe INTEGER, 
+idSportif INTEGER,
+Constraint CEq_PK PRIMARY KEY (idEquipe,idSportif),
+Constraint CEq_FK1 FOREIGN KEY (idEquipe) REFERENCES LesEquipes(idEquipe),
+Constraint CEq_FK2 FOREIGN KEY (idSportif) REFERENCES LesSportifs(idSportif)
 ); 
 
 CREATE TABLE LesMedailles (
@@ -119,10 +119,10 @@ CREATE VIEW viewDelegation as
     GROUP BY(idDelegation,pays);
 
 CREATE VIEW viewEquipe as
-    SELECT numEquipe,nomEquipe,categorie,count(numSportif)
+    SELECT idEquipe,nomEquipe,categorie,count(idSportif) as nbMembre
     FROM LesEquipes
     JOIN LesConstitutionsEquipe USING(numEquipe)
-    GROUP BY (numEquipe,nomEquipe,categorie);
+    GROUP BY (idEquipe,nomEquipe,categorie);
 
 /**A Faire**/
 CREATE VIEW viewChambre as
