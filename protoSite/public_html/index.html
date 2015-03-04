@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CyberCompetition</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/css.css" rel="stylesheet" type="text/css"/>
+        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <a href="#" id="navAcceuille"><div>ACCEUIL</div></a>
+                <a href="#" id="navCategorie"><div>CATEGORIE</div></a>
+                <a href="#" id="navEpreuves"><div>EPREUVES</div></a>
+                <a href="#" id="navAdmin"><div>ADMIN</div></a>
+                <a href="#" id="navPanier"><div>PANIER</div></a>
+            </div>
+
+            <div class="sousNav" id="sousNavCategorie">  
+                <a href="#"><div>Sport d'hiver</div></a>
+                <a href='#'><div>Ski nordique</div></a>
+                <a href='#'><div>Crossfit</div></a>
+                <a href='#'><div>Danse</div></a>
+            </div> 
+            
+            <div class="sousNav" id="sousNavAdmin">
+                <a href="#"><div>Inscrire Joueur</div></a>
+                <a href="#"><div>Inscrire Equipe</div></a>
+            </div>
+            
+            <div class='postIt hidden'>
+                <h1>Titre 1</h1>
+            </div>
+            <h2>Titre 2</h2>
+        </div>
+        <script>
+            $('#navCategorie').hover(function(){$('#sousNavCategorie').css('height','50');},function(){$('.sousNav').css('height','0');});
+            $('#navAdmin').hover(function(){$('#sousNavAdmin').css('height','50');});
+        </script>
+    </body>
+</html>

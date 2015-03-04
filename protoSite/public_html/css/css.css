@@ -1,0 +1,116 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 mars 2015, 11:06:13
+    Author     : Gato
+*/
+
+body{
+    background-color: #616161;
+
+}
+
+.container{
+    -webkit-flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin:auto;
+    min-width:600px;
+    max-width: 800px;
+    width:70%;
+    display:flex;
+}
+
+
+
+/* Barre de navigation*/
+
+.nav{
+    -webkit-justify-content:space-between;
+    -webkit-flex-wrap:nowrap;
+    -webkit-flex-direction:row;
+    -webkit-align-items:stretch;
+    display:flex;
+    list-style: none;
+    text-align: center;
+    
+}
+
+.nav a{
+    -webkit-flex:1;
+    color:white;
+    text-align: center;
+    font-size:20px;
+    font-weight:300;
+    text-decoration: none;    
+    line-height: normal;
+}
+
+
+.nav a div{
+    letter-spacing:1px;
+    line-height:80px;
+    height:80px;
+}
+
+.nav a:hover{
+    background-color:#888888;
+}
+
+.sousNav{
+    -webkit-justify-content:space-between;
+    -webkit-flex-wrap:wrap;
+    -webkit-flex-direction:row;
+    -webkit-align-items:stretch;
+    transition: height 0.5s linear;
+    background:lightcyan;
+    display:flex;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+    height:0px;
+}
+
+
+.sousNav:hover{
+    height:100px;
+}
+
+.sousNav a{
+    -webkit-flex:1;
+    color:black;
+    text-align: center;
+    font-size:16px;
+    font-weight:100;
+    margin-left:1px;
+    background-color:lightcyan;
+    text-decoration: none;    
+    line-height: normal;   
+}
+
+.sousNav a div{
+    letter-spacing:1px;
+    line-height:50px;
+    //height:50px;
+}
+
+.postIt{
+    height:150px;
+    background-color: #83f38b;
+    transition: height 0.5s linear
+}
+
+.postIt:hover{
+    height:200px;
+}
+
+
+.hidden{
+    overflow:hidden;
+}
+
+/* transition: height 1s linear;  */
