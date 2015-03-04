@@ -1,0 +1,124 @@
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Server version:        Apache Tomcat/7.0.57
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Server built:          Nov 3 2014 08:39:16 UTC
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Server number:         7.0.57.0
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: OS Name:               Linux
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: OS Version:            3.16.0-30-generic
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Architecture:          amd64
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: JAVA_HOME:             /usr/lib/jvm/java-7-oracle/jre
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: JVM Version:           1.7.0_76-b13
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: JVM Vendor:            Oracle Corporation
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: CATALINA_BASE:         /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: CATALINA_HOME:         /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Djava.util.logging.config.file=/home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/logging.properties
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|vivi-K50IE
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Djava.endorsed.dirs=/home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/endorsed
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Dcatalina.base=/home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Dcatalina.home=/home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57
+févr. 09, 2015 4:59:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFOS: Command line argument: -Djava.io.tmpdir=/home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/temp
+févr. 09, 2015 4:59:41 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFOS: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-7-oracle/jre/lib/amd64:/usr/lib/jvm/java-7-oracle/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+févr. 09, 2015 4:59:42 PM org.apache.coyote.AbstractProtocol init
+INFOS: Initializing ProtocolHandler ["http-bio-8080"]
+févr. 09, 2015 4:59:42 PM org.apache.coyote.AbstractProtocol init
+INFOS: Initializing ProtocolHandler ["ajp-bio-8009"]
+févr. 09, 2015 4:59:42 PM org.apache.catalina.startup.Catalina load
+INFOS: Initialization processed in 3492 ms
+févr. 09, 2015 4:59:43 PM org.apache.catalina.core.StandardService startInternal
+INFOS: Démarrage du service Catalina
+févr. 09, 2015 4:59:43 PM org.apache.catalina.core.StandardEngine startInternal
+INFOS: Starting Servlet Engine: Apache Tomcat/7.0.57
+févr. 09, 2015 4:59:43 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafeV2.xml
+févr. 09, 2015 4:59:44 PM org.apache.catalina.deploy.WebXml setVersion
+AVERTISSEMENT: Unknown version string [3.1]. Default version will be used.
+févr. 09, 2015 4:59:46 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafeV2.xml has finished in 3 237 ms
+févr. 09, 2015 4:59:46 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafeV3.xml
+févr. 09, 2015 4:59:46 PM org.apache.catalina.deploy.WebXml setVersion
+AVERTISSEMENT: Unknown version string [3.1]. Default version will be used.
+févr. 09, 2015 4:59:48 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafeV3.xml has finished in 1 769 ms
+févr. 09, 2015 4:59:48 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafeV1.xml
+févr. 09, 2015 4:59:48 PM org.apache.catalina.deploy.WebXml setVersion
+AVERTISSEMENT: Unknown version string [3.1]. Default version will be used.
+févr. 09, 2015 4:59:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafeV1.xml has finished in 1 477 ms
+févr. 09, 2015 4:59:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/ApliDataBase.xml
+févr. 09, 2015 4:59:52 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/ApliDataBase.xml has finished in 2 537 ms
+févr. 09, 2015 4:59:52 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafes.xml
+févr. 09, 2015 4:59:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/AppliCafes.xml has finished in 1 143 ms
+févr. 09, 2015 4:59:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/LeNombreCache.xml
+févr. 09, 2015 4:59:54 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/LeNombreCache.xml has finished in 958 ms
+févr. 09, 2015 4:59:54 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Déploiement du descripteur de configuration /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/WebApplication1.xml
+févr. 09, 2015 4:59:55 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFOS: Deployment of configuration descriptor /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/conf/Catalina/localhost/WebApplication1.xml has finished in 705 ms
+févr. 09, 2015 4:59:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Déploiement du répertoire /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/examples de l'application web
+févr. 09, 2015 4:59:57 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Deployment of web application directory /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/examples has finished in 2 440 ms
+févr. 09, 2015 4:59:57 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Déploiement du répertoire /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/ROOT de l'application web
+févr. 09, 2015 4:59:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Deployment of web application directory /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/ROOT has finished in 577 ms
+févr. 09, 2015 4:59:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Déploiement du répertoire /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/manager de l'application web
+févr. 09, 2015 4:59:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Deployment of web application directory /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/manager has finished in 696 ms
+févr. 09, 2015 4:59:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Déploiement du répertoire /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/host-manager de l'application web
+févr. 09, 2015 4:59:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Deployment of web application directory /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/host-manager has finished in 816 ms
+févr. 09, 2015 4:59:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Déploiement du répertoire /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/docs de l'application web
+févr. 09, 2015 5:00:00 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFOS: Deployment of web application directory /home/vivi/CCI/PL2/Serveur/apache-tomcat-7.0.57/webapps/docs has finished in 673 ms
+févr. 09, 2015 5:00:00 PM org.apache.coyote.AbstractProtocol start
+INFOS: Starting ProtocolHandler ["http-bio-8080"]
+févr. 09, 2015 5:00:00 PM org.apache.coyote.AbstractProtocol start
+INFOS: Starting ProtocolHandler ["ajp-bio-8009"]
+févr. 09, 2015 5:00:00 PM org.apache.catalina.startup.Catalina start
+INFOS: Server startup in 18069 ms
+févr. 09, 2015 7:50:02 PM org.apache.catalina.core.StandardServer await
+INFOS: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+févr. 09, 2015 7:50:02 PM org.apache.coyote.AbstractProtocol pause
+INFOS: Pausing ProtocolHandler ["http-bio-8080"]
+févr. 09, 2015 7:50:02 PM org.apache.coyote.AbstractProtocol pause
+INFOS: Pausing ProtocolHandler ["ajp-bio-8009"]
+févr. 09, 2015 7:50:02 PM org.apache.catalina.core.StandardService stopInternal
+INFOS: Arrêt du service Catalina
+févr. 09, 2015 7:50:03 PM org.apache.coyote.AbstractProtocol stop
+INFOS: Stopping ProtocolHandler ["http-bio-8080"]
+févr. 09, 2015 7:50:03 PM org.apache.coyote.AbstractProtocol stop
+INFOS: Stopping ProtocolHandler ["ajp-bio-8009"]
+févr. 09, 2015 7:50:03 PM org.apache.coyote.AbstractProtocol destroy
+INFOS: Destroying ProtocolHandler ["http-bio-8080"]
+févr. 09, 2015 7:50:03 PM org.apache.coyote.AbstractProtocol destroy
+INFOS: Destroying ProtocolHandler ["ajp-bio-8009"]
