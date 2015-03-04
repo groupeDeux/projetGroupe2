@@ -28,20 +28,26 @@ and open the template in the editor.
                 <a href='#'><div>Crossfit</div></a>
                 <a href='#'><div>Danse</div></a>
             </div> 
-            
+
             <div class="sousNav" id="sousNavAdmin">
                 <a href="#"><div>Inscrire Joueur</div></a>
                 <a href="#"><div>Inscrire Equipe</div></a>
             </div>
-            
-            <div class='postIt hidden'>
+
+            <div class='postIt'>
                 <h1>Titre 1</h1>
             </div>
             <h2>Titre 2</h2>
         </div>
         <script>
-            $('#navCategorie').hover(function(){$('#sousNavCategorie').css('height','50');},function(){$('.sousNav').css('height','0');});
-            $('#navAdmin').hover(function(){$('#sousNavAdmin').css('height','50');});
+            $('#navCategorie').hover(function () {
+                $('#sousNavCategorie').css('height', '50');
+            }, function () {
+                $('.sousNav').css('height', '0');
+            });
+            $('#navAdmin').hover(function () {
+                $('#sousNavAdmin').css('height', '50');
+            });
         </script>
     </body>
 </html>
