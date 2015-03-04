@@ -14,11 +14,12 @@ Constraint LCo_C1 UNIQUE (mail)
 CREATE TABLE LesTransactions (
 idTransaction INTEGER ,
 identifiant VARCHAR(30) NOT NULL,
+dateTransaction date NOT NULL,
 Constraint LTr_PK PRIMARY KEY (idTransaction),
 Constraint LTr_FK1 FOREIGN KEY (identifiant) REFERENCES LesComptes(identifiant)
 );
 
-CREATE TABLE LesDisciplines (
+/**CREATE TABLE LesDisciplines (
 nomDiscipline varchar(30),
 Constraint LDi_PK PRIMARY KEY (nomDiscipline)
 ); 
@@ -37,7 +38,7 @@ Constraint LEp_PK PRIMARY KEY (idEpreuve),
 Constraint LEp_FK1 FOREIGN KEY (nomDiscipline) REFERENCES LesDisciplines(nomDiscipline),
 Constraint LEp_C1 unique (urlVideo),
 Constraint LEp_C3 CHECK (dateDebut < DateFin)
-);
+);*//
 
 CREATE TABLE LesTickets (
 idTicket INTEGER,

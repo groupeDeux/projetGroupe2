@@ -1,5 +1,4 @@
---DROP TABLE LesDisciplines;
---DROP TABLE LesEpreuves
+
 
 CREATE TABLE LesDisciplines (
 nomDiscipline varchar(30),
@@ -43,7 +42,7 @@ Constraint LDe_PK PRIMARY KEY (idDelegation)
 
 CREATE TABLE LesParticipants (
 idParticipant INTEGER,
-idDelegation INTEGER,
+idDelegation INTEGER NOT NULL,
 Constraint LPa_PK PRIMARY KEY (idParticipant),
 Constraint LPa_FK1 FOREIGN KEY (idDelegation) REFERENCES LesDelegations(idDelegation)
 ); 
@@ -81,7 +80,7 @@ Constraint LSp_FK2 FOREIGN KEY (numChambre,nomBatiment) REFERENCES LesChambres(n
 CREATE TABLE LesEquipes (
 numEquipe INTEGER,
 nomEquipe VARCHAR(30),
-categorie VARCHAR(30),
+categorie VARCHAR(30) NOT NULL,
 Constraint LEq_PK PRIMARY KEY (numEquipe),
 Constraint LEq_FK1 FOREIGN KEY (numEquipe) REFERENCES LesParticipants(idParticipant)
 );
@@ -97,7 +96,7 @@ Constraint CEq_FK2 FOREIGN KEY (numSportif) REFERENCES LesSportifs(numSportif)
 CREATE TABLE LesMedailles (
 idEpreuve INTEGER,
 idParticipant INTEGER,
-valeur VARCHAR(30),
+valeur VARCHAR(30) NOT NULL,
 Constraint LMe_PK PRIMARY KEY (idEpreuve, idParticipant),
 Constraint LMe_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve),
 Constraint LMe_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParticipant),
@@ -110,4 +109,22 @@ idParticipant INTEGER,
 Constraint Pa_PK PRIMARY KEY (idEpreuve, idParticipant),
 Constraint Pa_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve),
 Constraint Pa_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParticipant)
-); 
+);
+
+/**Creation des views**/
+CREATE VIEW viewDelegation as 
+    SELECT idDelegation,pays,COUNT(idPArticipant) as nbSportif
+    FROM LesParticipants
+    JOIN LesDelegations USING(idDelegation)
+    GROUP BY(idDelegation,pays);
+
+CREATE VIEW viewEquipe as
+    SELECT numEquipe,nomEquipe,categorie,count(numSportif)
+    FROM LesEquipes
+    JOIN LesConstitutionsEquipe USING(numEquipe)
+    GROUP BY (numEquipe,nomEquipe,categorie);
+
+/**A Faire**/
+CREATE VIEW viewChambre as
+CREATE VIEW viewEpreuve as
+  
