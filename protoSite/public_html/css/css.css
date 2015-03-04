@@ -101,14 +101,29 @@ body{
 }
 
 .postIt{
-    -webkit-justify-content:space-between;
+    //-webkit-justify-content:start;
+    margin-bottom:10px;
     -webkit-flex-wrap:wrap;
     -webkit-flex-direction:column;
-    -webkit-align-items:stretch;
     display:flex;
-    -webkit-flex-direction:column;
-    background-color: #E5E5E5;
-    transition: height 0.5s linear
+    justify-content:flex-start;
+    align-items: stretch;
+    
+    background-color: #F0F0F0;
+    transition: height 0.5s linear;
+    //height: 600px;
+}
+
+.postIt div{
+    //display:flex;
+    flex:1;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    margin:15px;
+}
+
+.postIt[name="Handicap"]{
+    align-self:flex-end;
 }
 
 .postIt h2{

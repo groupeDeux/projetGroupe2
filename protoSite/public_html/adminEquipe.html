@@ -28,24 +28,35 @@
                 <a href="#"><div>Joueur</div></a>
                 <a href="#"><div>Equipe</div></a>
             </div>
-            
+
             <form class='postIt'>
                 <h2>Creer une équipe</h2>
-                <div><label for="listDelegation">Delegation</label><select id="listDelegation" name="nomDelegation">
+                <hr>
+                <div>
+                    <label for="listDelegation">Delegation</label><select id="listDelegation" name="nomDelegation">
                         <option>France</option>
                         <option>Angleterre</option>
                         <option>Espagne</option>
-                    </select></div>
+                    </select>
+                </div>
                 <div>
-                    <label>Masculin</label><input type="radio" name="sexe" value="Masculin" checked/>
-                    <label>Feminin</label><input type="radio" name="sexe" value="Feminin" />
-                    <label>Mixte</label><input type="radio" name="sexe" value="Mixte" />
+                    <label>Masculin</label><input type="radio" name="type" value="Masculin" checked/>
+                    <label>Feminin</label><input type="radio" name="type" value="Feminin" />
+                    <label>Mixte</label><input type="radio" name="type" value="Mixte" />
                     <span>
-                        <label>Handicap</label><input type="checkbox" name="Handicap">
+                        <label>Handicap</label><input type="checkbox" name="Handicap"/>
                     </span>
                 </div>
                 <div><button type="submit">Valider</button></div>
             </form>
+
+            <form class='postIt'>
+                <h2>Modifier une equipe</h2>
+                <div>
+                  
+                </div>
+            </form>
+
 
         </div>
         <script>
@@ -55,7 +66,7 @@
                 $('.sousNav').css('height', '0');
             });
             $('#navAdmin').hover(function () {
-                $('#sousNavAdmin').css('height', '50').css('opacity','1');
+                $('#sousNavAdmin').css('height', '50').css('opacity', '1');
             });
         </script>
     </body>
