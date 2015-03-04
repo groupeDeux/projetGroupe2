@@ -211,7 +211,7 @@
                         <point-y>435</point-y>
                     </point>
                     <task classkmad="tache.Tache" id-task-point="K32" idkmad="K33">
-                        <task-name>SuprimerBilletEpreuve</task-name>
+                        <task-name>SupprimerBilletEpreuve</task-name>
                         <task-numero>1.2.2.1</task-numero>
                         <task-observation/>
                         <task-executant>INT</task-executant>
@@ -350,7 +350,7 @@
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K49" idkmad="K50">
-                    <task-name>ValidePaymentBanque</task-name>
+                    <task-name>ValidePayementBanque</task-name>
                     <task-numero>2.3.3</task-numero>
                     <task-observation/>
                     <task-executant>SYS</task-executant>

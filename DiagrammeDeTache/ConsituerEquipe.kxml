@@ -75,7 +75,7 @@
                 </point>
             </task>
             <task classkmad="tache.Tache" id-task-point="K62" idkmad="K63">
-                <task-name>AtribuerID</task-name>
+                <task-name>AttribuerID</task-name>
                 <task-numero>1.3</task-numero>
                 <task-observation/>
                 <task-executant>SYS</task-executant>
@@ -102,7 +102,7 @@
             <task-interruptible>false</task-interruptible>
             <task-decomposition>SEQ</task-decomposition>
             <task-precondition>true</task-precondition>
-            <task-descriptionprecondition>Menbre dans equipe</task-descriptionprecondition>
+            <task-descriptionprecondition>il existe des equipes</task-descriptionprecondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <task-descriptioniteration>Tant que la l'utilisateur le souhaite</task-descriptioniteration>
@@ -127,7 +127,7 @@
                     <point-y>321</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K21" idkmad="K22">
-                    <task-name>SelectionnerNationalité</task-name>
+                    <task-name>SelectionnerNationalite</task-name>
                     <task-numero>2.1.1</task-numero>
                     <task-observation/>
                     <task-executant>INT</task-executant>
@@ -139,7 +139,7 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K21">
-                        <point-x>387</point-x>
+                        <point-x>361</point-x>
                         <point-y>476</point-y>
                     </point>
                 </task>
@@ -156,13 +156,13 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K24">
-                        <point-x>663</point-x>
+                        <point-x>544</point-x>
                         <point-y>476</point-y>
                     </point>
                 </task>
             </task>
             <task classkmad="tache.Tache" id-task-point="K65" id-task-subtasks-list="K72 K69 " idkmad="K66">
-                <task-name>ModifierMenbreEquipe</task-name>
+                <task-name>ModifierMembreEquipe</task-name>
                 <task-numero>2.2</task-numero>
                 <task-observation/>
                 <task-executant>ABS</task-executant>
@@ -180,7 +180,7 @@
                     <point-y>321</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K71" id-task-subtasks-list="K27 K74 " idkmad="K72">
-                    <task-name>SupprimerMenbre</task-name>
+                    <task-name>SupprimerMembre</task-name>
                     <task-numero>2.2.1</task-numero>
                     <task-observation/>
                     <task-executant>ABS</task-executant>
@@ -192,11 +192,11 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K71">
-                        <point-x>606</point-x>
-                        <point-y>466</point-y>
+                        <point-x>721</point-x>
+                        <point-y>476</point-y>
                     </point>
                     <task classkmad="tache.Tache" id-task-point="K26" idkmad="K27">
-                        <task-name>SelectionnerMenbre</task-name>
+                        <task-name>SelectionnerMembre</task-name>
                         <task-numero>2.2.1.1</task-numero>
                         <task-observation/>
                         <task-executant>INT</task-executant>
@@ -213,7 +213,7 @@
                         </point>
                     </task>
                     <task classkmad="tache.Tache" id-task-point="K73" idkmad="K74">
-                        <task-name>SuprimerMenbre</task-name>
+                        <task-name>SupprimerMembre</task-name>
                         <task-numero>2.2.1.2</task-numero>
                         <task-observation/>
                         <task-executant>SYS</task-executant>
@@ -231,7 +231,7 @@
                     </task>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K68" id-task-subtasks-list="K77 K79 " idkmad="K69">
-                    <task-name>AjouterMenbre</task-name>
+                    <task-name>AjouterMembre</task-name>
                     <task-numero>2.2.2</task-numero>
                     <task-observation/>
                     <task-executant>ABS</task-executant>
@@ -293,6 +293,7 @@
             <task-interruptible>false</task-interruptible>
             <task-decomposition>SEQ</task-decomposition>
             <task-precondition>true</task-precondition>
+            <task-descriptionprecondition>il existe des equipes</task-descriptionprecondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
             <task-descriptioniteration>Tant que la l'utilisateur le souhaite</task-descriptioniteration>
@@ -352,7 +353,7 @@
                 </task>
             </task>
             <task classkmad="tache.Tache" id-task-point="K43" idkmad="K44">
-                <task-name>ValiderSupression</task-name>
+                <task-name>ValiderSuppression</task-name>
                 <task-numero>3.2</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>

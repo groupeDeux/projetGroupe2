@@ -19,6 +19,7 @@
         <task-descriptionprecondition>Identification;PageIncriptionSportif;</task-descriptionprecondition>
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
+        <task-descriptioniteration>tant que l'utilisateur le souhaite</task-descriptioniteration>
         <point classkmad="tache.Point" idkmad="K3">
             <point-x>248</point-x>
             <point-y>0</point-y>
@@ -65,11 +66,11 @@
             <task-modality>COGN</task-modality>
             <task-optional>false</task-optional>
             <task-interruptible>false</task-interruptible>
-            <task-decomposition>SEQ</task-decomposition>
+            <task-decomposition>ALT</task-decomposition>
             <task-precondition>true</task-precondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
-            <task-descriptioniteration>Tant Parccipant du type a inscrire</task-descriptioniteration>
+            <task-descriptioniteration>tant que l'utilisateur le souhaite</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K17">
                 <point-x>459</point-x>
                 <point-y>145</point-y>
@@ -109,7 +110,7 @@
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K44" idkmad="K45">
-                    <task-name>AtribuerParticipant</task-name>
+                    <task-name>AttribuerParticipant</task-name>
                     <task-numero>3.1.2</task-numero>
                     <task-observation/>
                     <task-executant>SYS</task-executant>
@@ -127,7 +128,7 @@
                 </task>
             </task>
             <task classkmad="tache.Tache" id-task-point="K25" id-task-subtasks-list="K28 K48 " idkmad="K26">
-                <task-name>SuprimerAttributionEpreuveAParticipant</task-name>
+                <task-name>SupprimerAttributionEpreuveAParticipant</task-name>
                 <task-numero>3.2</task-numero>
                 <task-observation/>
                 <task-executant>ABS</task-executant>
@@ -162,7 +163,7 @@
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K47" idkmad="K48">
-                    <task-name>AtribuerParticipant</task-name>
+                    <task-name>SupprimerParticipant</task-name>
                     <task-numero>3.2.2</task-numero>
                     <task-observation/>
                     <task-executant>SYS</task-executant>
