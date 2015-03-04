@@ -15,7 +15,9 @@ body{
 
 .container{
     -webkit-flex-direction: column;
+    -moz-flex-direction: column;
     -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     margin:auto;
@@ -31,12 +33,15 @@ body{
 
 .nav{
     -webkit-justify-content:space-between;
+    -moz-justify-content:space-between;
     -webkit-flex-wrap:nowrap;
+    -moz-flex-wrap:nowrap;
     -webkit-flex-direction:row;
-    -webkit-align-items:stretch;
+    -moz-flex-direction:row;
     display:flex;
     list-style: none;
     text-align: center;
+    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.7);
     
 }
 
@@ -65,20 +70,17 @@ body{
     -webkit-justify-content:space-between;
     -webkit-flex-wrap:wrap;
     -webkit-flex-direction:row;
-    -webkit-align-items:stretch;
     transition: height 0.5s linear;
     background:lightcyan;
     display:flex;
     list-style: none;
     text-align: center;
     text-decoration: none;
+    opacity:0;
     height:0px;
 }
 
 
-.sousNav:hover{
-    height:100px;
-}
 
 .sousNav a{
     -webkit-flex:1;
@@ -99,14 +101,21 @@ body{
 }
 
 .postIt{
-    height:150px;
-    background-color: #83f38b;
+    -webkit-justify-content:space-between;
+    -webkit-flex-wrap:wrap;
+    -webkit-flex-direction:column;
+    -webkit-align-items:stretch;
+    display:flex;
+    -webkit-flex-direction:column;
+    background-color: #E5E5E5;
     transition: height 0.5s linear
 }
 
-.postIt:hover{
-    height:200px;
+.postIt h2{
+    -webkit-align-self:center;
 }
+
+
 
 
 .hidden{

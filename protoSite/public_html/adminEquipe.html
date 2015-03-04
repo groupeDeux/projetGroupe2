@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>CyberCompetition</title>
@@ -31,16 +26,33 @@ and open the template in the editor.
 
             <div class="sousNav" id="sousNavAdmin">
                 <a href="#"><div>Joueur</div></a>
-                <a href="adminEquipe.html"><div>Equipe</div></a>
+                <a href="#"><div>Equipe</div></a>
             </div>
-
+            
+            <form class='postIt'>
+                <h2>Creer une équipe</h2>
+                <div><label for="listDelegation">Delegation</label><select id="listDelegation" name="nomDelegation">
+                        <option>France</option>
+                        <option>Angleterre</option>
+                        <option>Espagne</option>
+                    </select></div>
+                <div>
+                    <label>Masculin</label><input type="radio" name="sexe" value="Masculin" checked/>
+                    <label>Feminin</label><input type="radio" name="sexe" value="Feminin" />
+                    <label>Mixte</label><input type="radio" name="sexe" value="Mixte" />
+                    <span>
+                        <label>Handicap</label><input type="checkbox" name="Handicap">
+                    </span>
+                </div>
+                <div><button type="submit">Valider</button></div>
+            </form>
 
         </div>
         <script>
             $('#navCategorie').hover(function () {
-                $('#sousNavDiscipline').css('height', '50').css('opacity','1');
+                $('#sousNavCategorie').css('height', '50');
             }, function () {
-                $('#sousNavDiscipline').css('height', '0').css('opacity','1');
+                $('.sousNav').css('height', '0');
             });
             $('#navAdmin').hover(function () {
                 $('#sousNavAdmin').css('height', '50').css('opacity','1');
