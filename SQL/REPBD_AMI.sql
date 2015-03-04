@@ -32,7 +32,7 @@ SELECT NEQUIPE,CATEGORIE
 FROM INISPORTIFSEQ;
 
 
-/*LesParticipants*/
+/*LesParticipants*//
 INSERT INTO lesParticipants(idDelegation)
 select idDelegation
 from INISPORTIFS
