@@ -16,7 +16,7 @@ FROM INILOGEMENTSINIT;
 select count(nomBatiment) from Lesbatiments;
 Select count(distinct NomBat) from InilogementsInit;*/
 
-/*
+
 DROP TABLE LesChambres;
 
 CREATE TABLE LesChambres (
@@ -28,7 +28,7 @@ Constraint LCh_FK1 FOREIGN KEY (nomBatiment) REFERENCES LesBatiments(nomBatiment
 );
 
 /*LesChambres --> valide*/
-/*
+
 INSERT INTO LesChambres (numChambre,nomBatiment, capacite)
 select distinct NLOGEMENT,NOMBAT,CAPACITE
 FROM INILOGEMENTSINIT;
@@ -43,7 +43,7 @@ select sum(nbChambre) from
     (select count(distinct Nlogement) as nbChambre from InilogementsInit group by nomBat)R1;*/
 
 
-
+/*
 CREATE TABLE LesSportifs (
 idSportif INTEGER,
 nom VARCHAR(30) NOT NULL,

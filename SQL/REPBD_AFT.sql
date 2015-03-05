@@ -17,6 +17,12 @@ INSERT INTO LesChambres (numChambre,nomBatiment, capacite)
 select NLOGEMENT,NOMBAT,CAPACITE
 FROM INILOGEMENTSINIT;
 
+select nomBatiment,count(numChambre) from LesChambres group by nomBatiment;
+Select nomBat,count(distinct Nlogement) from InilogementsInit group by nomBat;
+
+select count(nbChambre)
+    from (Select count(numChambre) as nbChambre from LesChambres group by nomBatiment;
+
 /*LesSportifs*/
 INSERT INTO  LesSportifs(idSportif,nom, prenom,dateNaissance,genre,numChambre,nomBatiment) 
 SELECT NS, NOM, PRENOM, DATENAIS, CATEGORIE, NLOGEMENT, NOMBAT
