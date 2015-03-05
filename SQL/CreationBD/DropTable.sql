@@ -11,12 +11,10 @@ DROP TABLE LesEpreuvesParEquipe;
 DROP TABLE LesMedailles;
 DROP TABLE LesParticipations;
 DROP TABLE LesEpreuves;
-DROP TABLE LesDisciplines;
 
 DROP TABLE LesConstitutionsEquipe;
 DROP TABLE LesEquipes;
 DROP TABLE LesSportifs;
 DROP TABLE LesParticipants;
-DROP TABLE LesDelegations;
 DROP TABLE LesChambres;
 DROP TABLE LesBatiments;

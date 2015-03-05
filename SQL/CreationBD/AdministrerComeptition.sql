@@ -1,11 +1,4 @@
-
-
-CREATE TABLE LesDisciplines (
-nomDiscipline varchar(30),
-Constraint LDi_PK PRIMARY KEY (nomDiscipline)
-); 
-
-CREATE TABLE LesEpreuves(
+ CREATE TABLE LesEpreuves(
 idEpreuve INTEGER,
 nomEpreuve VARCHAR(30) NOT NULL,
 nomDiscipline VARCHAR(30) NOT NULL,
@@ -16,7 +9,6 @@ urlVideo VARCHAR(100),
 tarif NUMBER(5,2),
 nbDePlace INTEGER,
 Constraint LEp_PK PRIMARY KEY (idEpreuve),
-Constraint LEp_FK1 FOREIGN KEY (nomDiscipline) REFERENCES LesDisciplines(nomDiscipline),
 Constraint LEp_C1 unique (urlVideo),
 Constraint LEp_C3 CHECK (dateDebut < DateFin)
 );
@@ -29,22 +21,15 @@ Constraint LEpInd_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 
 CREATE TABLE LesEpreuvesParEquipe (
 idEpreuve INTEGER,
-nbPersonneFixe INTEGER,
-Constraint LEpEq_PK PRIMARY KEY (nidEpreuve),
+nbPersonneFixe INTEGER NOT NULL,
+Constraint LEpEq_PK PRIMARY KEY (idEpreuve),
 Constraint LEpEq_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 ); 
 
-CREATE TABLE LesDelegations (
-idDelegation INTEGER,
-pays VARCHAR(30) NOT NULL,
-Constraint LDe_PK PRIMARY KEY (idDelegation)
-);
-
 CREATE TABLE LesParticipants (
 idParticipant INTEGER,
-idDelegation INTEGER NOT NULL,
-Constraint LPa_PK PRIMARY KEY (idParticipant),
-Constraint LPa_FK1 FOREIGN KEY (idDelegation) REFERENCES LesDelegations(idDelegation)
+pays VARCHAR(30) NOT NULL,
+Constraint LPa_PK PRIMARY KEY (idParticipant)
 ); 
 
 CREATE TABLE LesBatiments (
@@ -113,18 +98,29 @@ Constraint Pa_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParti
 
 /**Creation des views**/
 CREATE VIEW viewDelegation as 
-    SELECT idDelegation,pays,COUNT(idPArticipant) as nbSportif
+    SELECT pays,COUNT(idPArticipant) as nbSportif
     FROM LesParticipants
-    JOIN LesDelegations USING(idDelegation)
-    GROUP BY(idDelegation,pays);
+    GROUP BY(pays);
 
 CREATE VIEW viewEquipe as
     SELECT idEquipe,nomEquipe,categorie,count(idSportif) as nbMembre
     FROM LesEquipes
-    JOIN LesConstitutionsEquipe USING(numEquipe)
+    JOIN LesConstitutionsEquipe USING(idEquipe)
     GROUP BY (idEquipe,nomEquipe,categorie);
 
 /**A Faire**/
 CREATE VIEW viewChambre as
+    SELECT numChambre,capacite,genre,pays,count(idSportif) as nbPlacesUtilisees
+    FROM LesSportifs S
+    JOIN LesParticipants P on (S.idSportif=P.idParticipant)
+    NATURAL JOIN LesChambres
+    GROUP BY numChambre,capacite,genre,pays ; 
+
 CREATE VIEW viewEpreuve as
-  
+    SELECT idEpreuve,nomEpreuve,nomDiscipline,categorie, dateDebut, dateFin, urlVideo,tarif,nbDePlace,count(idBillet) as nbDePlaceAchetées
+    FROM LesEpreuves 
+    JOIN LesTickets using (idEpreuve)
+    JOIN LesBillets on (idBillet=idTicket) 
+    GROUP BY (idEpreuve,nomEpreuve,nomDiscipline,categorie, dateDebut, dateFin, urlVideo,tarif,nbDePlace) ; 
+    
+ 

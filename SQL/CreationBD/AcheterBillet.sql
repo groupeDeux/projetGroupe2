@@ -19,12 +19,7 @@ Constraint LTr_PK PRIMARY KEY (idTransaction),
 Constraint LTr_FK1 FOREIGN KEY (identifiant) REFERENCES LesComptes(identifiant)
 );
 
-/**CREATE TABLE LesDisciplines (
-nomDiscipline varchar(30),
-Constraint LDi_PK PRIMARY KEY (nomDiscipline)
-); 
-
-CREATE TABLE LesEpreuves(
+/**CREATE TABLE LesEpreuves(
 idEpreuve INTEGER,
 nomEpreuve VARCHAR(30) NOT NULL,
 nomDiscipline VARCHAR(30) NOT NULL,
@@ -38,7 +33,7 @@ Constraint LEp_PK PRIMARY KEY (idEpreuve),
 Constraint LEp_FK1 FOREIGN KEY (nomDiscipline) REFERENCES LesDisciplines(nomDiscipline),
 Constraint LEp_C1 unique (urlVideo),
 Constraint LEp_C3 CHECK (dateDebut < DateFin)
-);*//
+);*/
 
 CREATE TABLE LesTickets (
 idTicket INTEGER,
