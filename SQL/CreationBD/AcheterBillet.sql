@@ -33,13 +33,8 @@ Constraint LEp_PK PRIMARY KEY (idEpreuve),
 Constraint LEp_FK1 FOREIGN KEY (nomDiscipline) REFERENCES LesDisciplines(nomDiscipline),
 Constraint LEp_C1 unique (urlVideo),
 Constraint LEp_C3 CHECK (dateDebut < DateFin)
-<<<<<<< HEAD
 );*/
-=======
-);**/
->>>>>>> f2bc30dc340edd61519f2412112e9d095db47ab3
 
-CREATE SEQUENCE seqIdBillet;
 CREATE TABLE LesTickets (
 idTicket INTEGER,
 idTransaction INTEGER NOT NULL,
@@ -51,8 +46,7 @@ Constraint LTi_FK2 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 
 CREATE TABLE LesBillets (
 idBillet INTEGER, 
-Constraint LBi_PK PRIMARY KEY (idBillet),
-Constraint LBi_FK1 FOREIGN KEY (idBillet) REFERENCES LesTickets(idTicket)
+Constraint LBi_PK PRIMARY KEY (idBillet)
 );
 
 CREATE TABLE LesTicketsVideo (

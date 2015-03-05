@@ -25,7 +25,3 @@ DROP TABLE LesParticipants;
 DROP TABLE LesChambres;
 DROP TABLE LesBatiments;
 
-/*Sequence*/
-DROP SEQUENCE seqIdParticipant;
-DROP SEQUENCE seqIdEpreuve;
-CREATE SEQUENCE seqIdBillet;
