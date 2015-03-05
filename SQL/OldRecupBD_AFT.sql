@@ -40,7 +40,7 @@ using(nom,prenom,dateNaissance);
 /* -------------- COTE EPREUVES ---------------
 
 /*LesEpreuvesIndividuelles*/
-INSERT INTO LesEpreuvesIndividuelles(idEquipe,nomEquipe,categorie)  
+INSERT INTO LesEpreuvesIndividuelles(idEpreuve)  
 SELECT SeqParticipant.next,NEQUIPE,CATEGORIE
 FROM INISPORTIFSEQ;
 
