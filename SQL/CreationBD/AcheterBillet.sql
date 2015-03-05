@@ -40,6 +40,7 @@ Constraint LEp_C1 unique (urlVideo),
 Constraint LEp_C3 CHECK (dateDebut < DateFin)
 );**/
 
+CREATE SEQUENCE seqIdBillet;
 CREATE TABLE LesTickets (
 idTicket INTEGER,
 idTransaction INTEGER NOT NULL,
