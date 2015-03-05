@@ -1,15 +1,10 @@
+
+/* -------------- COTE PARTICIPANTS ---------------
+
 /* LesDelegations*/
 Insert INTO LesDelegations (pays)
 select distinct PAYS
 FROM INISPORTIFS;
-
-/* viewDelegation
-
-LesDelegations(NBSPORTIF)
-SELECT INTO ViewLesDelegations (nbSportif,pays)
-select COUNT (DISTINCT NS) AS NBSPORTIF,PAYS
-FROM JO.LESSPORTIFS
-GROUP BY PAYS ; */
 
 /*LesBatiments*/
 INSERT INTO LesBatiments (nomBatiment, numRue,rue,ville)
@@ -22,31 +17,36 @@ select NLOGEMENT,NOMBAT,CAPACITE
 FROM INILOGEMENTSINIT;
 
 /*LesSportifs*/
-INSERT INTO  LesSportifs(numSportif,nom, prenom,dateNaissance,genre,numChambre,nomBatiment) 
-SELECT NS, NOM, PRENOM, DATENAIS, CATEGORIE, NLOGEMENT, NOMBAT
+INSERT INTO  LesSportifs(idSportif,nom, prenom,dateNaissance,genre,numChambre,nomBatiment) 
+SELECT SeqParticipants.next, NOM, PRENOM, DATENAIS, CATEGORIE, NLOGEMENT, NOMBAT
 FROM INISPORTIFS
     JOIN INILOGEMENTSINIT
     USING(NOM,PRENOM);
 
-
-/*LesParticipants*//
-INSERT INTO lesParticipants(idDelegation)
-select idDelegation
-from INISPORTIFS
-JOIN LesDelegations
-USING (pays); 
-
-
-/* A REVOIR AVEC NUMSPORTIF*/
-
-
 /*LesEquipes*/
-INSERT INTO LesEquipes(nomEquipe,categorie)  
-SELECT NEQUIPE,CATEGORIE
+INSERT INTO LesEquipes(idEquipe,nomEquipe,categorie)  
+SELECT SeqParticipant.next,NEQUIPE,CATEGORIE
 FROM INISPORTIFSEQ;
 
-/*
+/*LesParticipants*//
+INSERT INTO lesParticipants(idParticipant,idDelegation)
+select idSportifs,idDelegation
+from INISPORTIFS
+JOIN LesDelegations
+USING (pays)
+join LesSportifs
+using(nom,prenom,dateNaissance);
+
+/* -------------- COTE EPREUVES ---------------
+
+/*LesEpreuvesIndividuelles*/
+INSERT INTO LesEpreuvesIndividuelles(idEquipe,nomEquipe,categorie)  
+SELECT SeqParticipant.next,NEQUIPE,CATEGORIE
+FROM INISPORTIFSEQ;
+
+
 /* Table LesSportif avec premier idParticipant disponible */
+/*
 INSERT INTO  LesSportifs(idSportif, nom,prenom, dateNaissance, genre,numChambre,nomBatiment)
 SELECT idParticipant,nom,prenom,dateNaissance,genre,numChambre,nomBatiment
 FROM inilogementinit

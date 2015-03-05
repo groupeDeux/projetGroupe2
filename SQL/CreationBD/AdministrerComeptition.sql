@@ -1,4 +1,16 @@
+<<<<<<< HEAD
  CREATE TABLE LesEpreuves(
+=======
+
+
+CREATE TABLE LesDisciplines (
+nomDiscipline varchar(30),
+Constraint LDi_PK PRIMARY KEY (nomDiscipline)
+); 
+
+CREATE SEQUENCE seqIdEpreuve;
+CREATE TABLE LesEpreuves(
+>>>>>>> f2bc30dc340edd61519f2412112e9d095db47ab3
 idEpreuve INTEGER,
 nomEpreuve VARCHAR(30) NOT NULL,
 nomDiscipline VARCHAR(30) NOT NULL,
@@ -21,16 +33,28 @@ Constraint LEpInd_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 
 CREATE TABLE LesEpreuvesParEquipe (
 idEpreuve INTEGER,
+<<<<<<< HEAD
 nbPersonneFixe INTEGER NOT NULL,
+=======
+nbPersonneFixe INTEGER,
+>>>>>>> f2bc30dc340edd61519f2412112e9d095db47ab3
 Constraint LEpEq_PK PRIMARY KEY (idEpreuve),
 Constraint LEpEq_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 ); 
 
+<<<<<<< HEAD
 CREATE TABLE LesParticipants (
 idParticipant INTEGER,
 pays VARCHAR(30) NOT NULL,
 Constraint LPa_PK PRIMARY KEY (idParticipant)
 ); 
+=======
+CREATE TABLE LesDelegations (
+idDelegation INTEGER,
+pays VARCHAR(30) NOT NULL,
+Constraint LDe_PK PRIMARY KEY (idDelegation)
+);
+>>>>>>> f2bc30dc340edd61519f2412112e9d095db47ab3
 
 CREATE TABLE LesBatiments (
 nomBatiment VARCHAR(30),
@@ -47,6 +71,15 @@ capacite INTEGER,
 Constraint LCh_PK PRIMARY KEY (numChambre,nomBatiment),
 Constraint LCh_FK1 FOREIGN KEY (nomBatiment) REFERENCES LesBatiments(nomBatiment)
 );
+
+CREATE SEQUENCE seqIdParticipant;
+
+CREATE TABLE LesParticipants (
+idParticipant INTEGER,
+idDelegation INTEGER NOT NULL,
+Constraint LPa_PK PRIMARY KEY (idParticipant),
+Constraint LPa_FK1 FOREIGN KEY (idDelegation) REFERENCES LesDelegations(idDelegation)
+); 
 
 CREATE TABLE LesSportifs (
 idSportif INTEGER,
@@ -109,6 +142,7 @@ CREATE VIEW viewEquipe as
     GROUP BY (idEquipe,nomEquipe,categorie);
 
 /**A Faire**/
+<<<<<<< HEAD
 CREATE VIEW viewChambre as
     SELECT numChambre,capacite,genre,pays,count(idSportif) as nbPlacesUtilisees
     FROM LesSportifs S
@@ -124,3 +158,8 @@ CREATE VIEW viewEpreuve as
     GROUP BY (idEpreuve,nomEpreuve,nomDiscipline,categorie, dateDebut, dateFin, urlVideo,tarif,nbDePlace) ; 
     
  
+=======
+/**CREATE VIEW viewChambre as
+CREATE VIEW viewEpreuve as*//
+  
+>>>>>>> f2bc30dc340edd61519f2412112e9d095db47ab3

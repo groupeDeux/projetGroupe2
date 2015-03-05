@@ -18,6 +18,7 @@
         <task-precondition>true</task-precondition>
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
+        <task-descriptioniteration>Pour revenir au début</task-descriptioniteration>
         <point classkmad="tache.Point" idkmad="K3">
             <point-x>646</point-x>
             <point-y>51</point-y>
