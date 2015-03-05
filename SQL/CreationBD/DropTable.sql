@@ -1,3 +1,9 @@
+/**View**/
+DROP VIEW viewDelegation;
+DROP VIEW viewChambre;
+DROP VIEW viewEpreuve;
+DROP VIEW viewEquipe;
+
 /** AchatBillet**/
 DROP TABLE LesBillets;
 DROP TABLE LesTicketsVideo;
@@ -20,3 +26,7 @@ DROP TABLE LesParticipants;
 DROP TABLE LesDelegations;
 DROP TABLE LesChambres;
 DROP TABLE LesBatiments;
+
+/*Sequence*/
+DROP SEQUENCE seqIdParticipant;
+DROP SEQUENCE seqIdEpreuve;

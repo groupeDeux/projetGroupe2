@@ -5,6 +5,7 @@ nomDiscipline varchar(30),
 Constraint LDi_PK PRIMARY KEY (nomDiscipline)
 ); 
 
+CREATE SEQUENCE seqIdEpreuve;
 CREATE TABLE LesEpreuves(
 idEpreuve INTEGER,
 nomEpreuve VARCHAR(30) NOT NULL,
@@ -30,7 +31,7 @@ Constraint LEpInd_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 CREATE TABLE LesEpreuvesParEquipe (
 idEpreuve INTEGER,
 nbPersonneFixe INTEGER,
-Constraint LEpEq_PK PRIMARY KEY (nidEpreuve),
+Constraint LEpEq_PK PRIMARY KEY (idEpreuve),
 Constraint LEpEq_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 ); 
 
@@ -39,13 +40,6 @@ idDelegation INTEGER,
 pays VARCHAR(30) NOT NULL,
 Constraint LDe_PK PRIMARY KEY (idDelegation)
 );
-
-CREATE TABLE LesParticipants (
-idParticipant INTEGER,
-idDelegation INTEGER NOT NULL,
-Constraint LPa_PK PRIMARY KEY (idParticipant),
-Constraint LPa_FK1 FOREIGN KEY (idDelegation) REFERENCES LesDelegations(idDelegation)
-); 
 
 CREATE TABLE LesBatiments (
 nomBatiment VARCHAR(30),
@@ -62,6 +56,15 @@ capacite INTEGER,
 Constraint LCh_PK PRIMARY KEY (numChambre,nomBatiment),
 Constraint LCh_FK1 FOREIGN KEY (nomBatiment) REFERENCES LesBatiments(nomBatiment)
 );
+
+CREATE SEQUENCE seqIdParticipant;
+
+CREATE TABLE LesParticipants (
+idParticipant INTEGER,
+idDelegation INTEGER NOT NULL,
+Constraint LPa_PK PRIMARY KEY (idParticipant),
+Constraint LPa_FK1 FOREIGN KEY (idDelegation) REFERENCES LesDelegations(idDelegation)
+); 
 
 CREATE TABLE LesSportifs (
 idSportif INTEGER,
@@ -121,10 +124,10 @@ CREATE VIEW viewDelegation as
 CREATE VIEW viewEquipe as
     SELECT idEquipe,nomEquipe,categorie,count(idSportif) as nbMembre
     FROM LesEquipes
-    JOIN LesConstitutionsEquipe USING(numEquipe)
+    JOIN LesConstitutionsEquipe USING(idEquipe)
     GROUP BY (idEquipe,nomEquipe,categorie);
 
 /**A Faire**/
-CREATE VIEW viewChambre as
-CREATE VIEW viewEpreuve as
+/**CREATE VIEW viewChambre as
+CREATE VIEW viewEpreuve as*//
   
