@@ -21,20 +21,20 @@ INSERT INTO LesChambres (numChambre,nomBatiment, capacite)
 select NLOGEMENT,NOMBAT,CAPACITE
 FROM INILOGEMENTSINIT;
 
-/*LesSportifs*/
-INSERT INTO  LesSportifs(numSportif,nom, prenom,dateNaissance,genre,numChambre,nomBatiment) 
-SELECT NS, NOM, PRENOM, DATENAIS, CATEGORIE, NLOGEMENT, NOMBAT
-FROM INISPORTIFS
-    JOIN INILOGEMENTSINIT
-    USING(NOM,PRENOM);
-
-
 /*LesParticipants*//
 INSERT INTO lesParticipants(idDelegation)
 select idDelegation
 from INISPORTIFS
 JOIN LesDelegations
 USING (pays); 
+
+/*LesSportifs*/
+INSERT INTO  LesSportifs(idSportif,nom, prenom,dateNaissance,genre,numChambre,nomBatiment) 
+SELECT NS, NOM, PRENOM, DATENAIS, CATEGORIE, NLOGEMENT, NOMBAT
+FROM INISPORTIFS
+    JOIN INILOGEMENTSINIT
+    USING(NOM,PRENOM);
+
 
 
 /* A REVOIR AVEC NUMSPORTIF*/
