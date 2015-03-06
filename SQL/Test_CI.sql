@@ -98,9 +98,14 @@ from (
     group by NLogement,capacite) R1
 where (nbPersonnes>capacite);
 
-Select *
-from IniLogementsInit
-where (Nlogement=104);
+
+/* Un sportif n'est attribue qu a une seule chambre? */
+
+select count(*)
+from IniLogementsInit L1
+join IniLogementsInit L2
+on (L1.nom=L2.nom and L1.prenom=L2.prenom)
+where (L1.Nlogement<>L2.nLogement);
 
 
 
@@ -112,3 +117,8 @@ SELECT nom, prenom,pays,categorie,datenais,nequipe
 FROM iniSportifsEq
 WHERE Nequipe is null
 ORDER BY PAYS, NOM;
+
+Select *
+from IniLogementsInit
+where (Nlogement=104 or nlogement=105 or nlogement=211)
+order by nlogement;
