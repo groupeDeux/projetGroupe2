@@ -8,34 +8,18 @@ Select count(distinct NomBat) from InilogementsInit;
 
 
 /*LesChambres --> valide*/
-
 INSERT INTO LesChambres (numChambre,nomBatiment, capacite)
     SELECT DISTINCT NLOGEMENT,NOMBAT,CAPACITE
     FROM INILOGEMENTSINIT;
 
-
 Select count(distinct(Nlogement)) from IniLogementsInit;
 Select count (distinct (numChambre)) from LesChambres;
 
-select sum(nbChambre) from 
-    (select count(numChambre) as nbChambre from LesChambres group by nomBatiment)R1;
-
-select sum(nbChambre) from 
-    (select count(distinct Nlogement) as nbChambre from InilogementsInit group by nomBat)R1;
-
-
 
 /*LesParticipants - Sportifs*/
-
-
 INSERT INTO lesParticipants(idParticipant,pays)
     SELECT NS,pays
-    FROM INISPORTIFS; 
-
-
-Select count(distinct(NS)) from IniSportifs;
-Select count(NS) from IniSportifs;
-Select count(*) from IniSportifs where categorie is null;
+    FROM INISPORTIFS;
 
 Select count(*) from IniSportifs;
 Select count(*) from LesParticipants;
@@ -53,13 +37,11 @@ where (NbSportifsParPaysIni<>NbSportifsParPays);
 
 
 /*LesParticipants - Equipe*/
-
 INSERT INTO lesParticipants(idParticipant,pays)
     SELECT DISTINCT (NEquipe),pays
     FROM INISPORTIFSEQ
     WHERE NEquipe is not null;
 
-select count(*) from iniSportifsEq where Nequipe is null;
 select count( distinct Nequipe) from iniSportifsEq;
 select count(idParticipant) from lesParticipants where (idParticipant<1000);
 
@@ -77,31 +59,7 @@ select count(*) from lesSportifs;
 select count(*) from IniSportifs where categorie is not null;   
 
 
-
-
 /*LesEquipes*/
-
-
-
-/*
-Create view viewCategorie as
-    SELECT NEQUIPE,CATEGORIE
-            FROM INISPORTIFSEQ
-            where (NEquipe is not null and Categorie is not null)
-            group by Nequipe,categorie
-
-    Select Nequipe,categorie 
-    from    (SELECT NEQUIPE,CATEGORIE
-            FROM INISPORTIFSEQ
-            where (NEquipe is not null and Categorie is not null)
-            group by Nequipe,categorie
-            having (1 in (select count(categorie) 
-                        from (SELECT NEQUIPE,CATEGORIE
-                                FROM INISPORTIFSEQ
-                                where (NEquipe is not null and Categorie is not null)
-                                group by Nequipe,categorie)R1
-                        group by(Nequipe))R2)
-            order by nequipe)R3; */
 
 /* insert des equipe mixte count(distinct categorie) = 1 
 R1: recuperation nequipe et categorie par nequipe et categorie 
@@ -138,7 +96,7 @@ select count(*) from lesEquipes;
 
 select count(distinct nequipe) 
 from IniSportifsEq 
-where nequipe is not null and categorie is not null; 
+where nequipe is not null; 
 
 
 /*LesConstitutionEquipes*/
@@ -147,21 +105,10 @@ INSERT INTO LesConstitutionsEquipe(idEquipe, idSportif)
     FROM iniSportifs
     JOIN iniSportifsEq
     USING (nom,prenom)
-    WHERE (Nequipe is not null and inisportifs.categorie is not null);
-
-/* VERIF AVEC SELECT*/
+    WHERE (Nequipe is not null);
 
 select count(*) from lesConstitutionsEquipe;
 
 select count(*) 
 from IniSportifsEq 
 where nequipe is not null and categorie is not null;
-
-
-/*--------------------------- A FAIRE -----------------------------------*/
-/* --- RECUPERER TOUTES LES DONNEES EXCLUE DE NOTRE BD AVEC SELECT ....  */ 
-
-SELECT nom, prenom,pays,categorie,datenais,nequipe
-FROM iniSportifsEq
-WHERE Nequipe is null
-ORDER BY PAYS, NOM;

@@ -1,9 +1,3 @@
-/* LesDelegations*/
-/*
-Insert INTO LesDelegations (pays)
-select distinct PAYS
-FROM INISPORTIFS;*/
-
 /*LesBatiments*/
 INSERT INTO LesBatiments (nomBatiment, numRue,rue,ville)
     SELECT DISTINCT (NOMBAT),NUMERO,RUE,VILLE
