@@ -14,6 +14,7 @@ and open the template in the editor.
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js" ></script>
+        <script type="text/javascript" src="js/jsCyberCompetition.js" ></script>
     </head>
     <body>
         <div class="container">
@@ -48,7 +49,7 @@ and open the template in the editor.
                         TITRE DE LA PAGE 
                 --> 
                 <div class="page-header">
-                    <h2 class="text-center"><small>Administration des</small> Equipes</h2>
+                    <h2 class="text-center"><small>Administration des</small> <span id="nomTitreAdmin">Equipes</span></h2>
                 </div>
 
                 <!-- 
@@ -135,7 +136,6 @@ and open the template in the editor.
                         -->
 
                         <div id='tab2'>
-
                             <form class="form-horizontal">
                                 <div class="well">
                                     Cette page vous permet de modifier les élements d'une équipe : 
@@ -272,8 +272,10 @@ and open the template in the editor.
                                 </div>
                             </form>
                         </div>
-                        <div id="tab4">
-                            <h2> #Under Construction</h2>
+                        <div class="row">
+                            <div id="tab4">
+                                <h2> #Under Construction</h2>
+                            </div>
                         </div>
                     </div>        
                 </div>
@@ -284,9 +286,17 @@ and open the template in the editor.
                 $("#tabs").tabs();
                 //$("#tabs").tabs("option","active",0);
             });
- 
+
             $("li[role='presentation']").click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $("a[href='#tab4']").click(function () {
+                $('#nomTitreAdmin').text(" Sportifs");
+            });
+
+            $("a[href!='#tab4']").click(function () {
+                $('#nomTitreAdmin').text(" Equipes");
             });
         </script>
     </body>
