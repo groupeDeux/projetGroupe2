@@ -10,7 +10,9 @@ tarif NUMBER(5,2),
 nbDePlace INTEGER,
 Constraint LEp_PK PRIMARY KEY (idEpreuve),
 Constraint LEp_C1 unique (urlVideo),
-Constraint LEp_C3 CHECK (dateDebut < DateFin)
+Constraint LEp_C3 CHECK (dateDebut < DateFin),
+Constraint LEp_C5 CHECK (tarif>=0),
+Constraint LEp_C6 CHECK (nbDePlace >=0)
 );
 
 CREATE TABLE LesEpreuvesIndividuelles (
@@ -45,7 +47,8 @@ numChambre VARCHAR(30),
 nomBatiment VARCHAR(30), 
 capacite INTEGER,
 Constraint LCh_PK PRIMARY KEY (numChambre,nomBatiment),
-Constraint LCh_FK1 FOREIGN KEY (nomBatiment) REFERENCES LesBatiments(nomBatiment)
+Constraint LCh_FK1 FOREIGN KEY (nomBatiment) REFERENCES LesBatiments(nomBatiment),
+Constraint LCh_C1 CHECK (capacite >=0)
 );
 
 CREATE TABLE LesSportifs (
@@ -85,6 +88,7 @@ valeur VARCHAR(30) NOT NULL,
 Constraint LMe_PK PRIMARY KEY (idEpreuve, idParticipant),
 Constraint LMe_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve),
 Constraint LMe_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParticipant),
+Constraint LMe_FK3 FOREIGN KEY (idParticipant,idEpreuve) REFERENCES LesParticipations(idParticipant,idEpreuve)
 Constraint LMe_C1 UNIQUE (idEpreuve, valeur)
 );
 
