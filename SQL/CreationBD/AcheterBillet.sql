@@ -56,7 +56,7 @@ Constraint LTiVid_PK PRIMARY KEY (idTicketVideo),
 Constraint LTiVid_FK1 FOREIGN KEY (idTicketVideo) REFERENCES LesTickets(idTicket)
 );
 
-
+/**Creation des views**/
 CREATE VIEW viewEpreuve as
     SELECT idEpreuve,nomEpreuve,nomDiscipline,categorie, dateDebut, dateFin, urlVideo,tarif,nbDePlace,count(idBillet) as nbDePlaceAchetées
     FROM LesEpreuves 

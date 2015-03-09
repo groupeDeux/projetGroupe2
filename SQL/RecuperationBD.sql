@@ -58,6 +58,13 @@ SELECT DISTINCT Nequipe,'mixte' as categorie
             HAVING COUNT(distinct categorie)=2)R2
     USING (Nequipe);
 
+/*LesConstitutionsEquipes*/
+INSERT INTO LesConstitutionsEquipe(idEquipe,idSportif)
+    SELECT nequipe, NS
+    FROM iniSportifsEq E
+    JOIN iniSportifs S
+    ON (E.nom=S.nom and E.prenom=S.prenom)
+    WHERE (NEquipe is not null);
 
 /*LesEpreuves*/
 INSERT INTO LesEpreuves(idEpreuve,nomEpreuve,nomDiscipline,categorie,dateDebut,dateFin)

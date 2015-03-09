@@ -108,13 +108,12 @@ CREATE VIEW viewEquipe as
     JOIN LesConstitutionsEquipe USING(idEquipe)
     GROUP BY (idEquipe,nomEquipe,categorie);
 
-/**A Faire**/
 CREATE VIEW viewChambre as
-    SELECT numChambre,capacite,genre,pays,count(idSportif) as nbPlacesUtilisees
+    SELECT numChambre,nomBatiment,capacite,genre,pays,count(idSportif) as nbPlacesUtilisees
     FROM LesSportifs S
     JOIN LesParticipants P on (S.idSportif=P.idParticipant)
     NATURAL JOIN LesChambres
-    GROUP BY numChambre,capacite,genre,pays ; 
+    GROUP BY numChambre,nomBatiment,capacite,genre,pays ; 
 
     
  
