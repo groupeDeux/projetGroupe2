@@ -8,7 +8,6 @@ INSERT INTO LesBatiments (nomBatiment, numRue,rue,ville)
 select count(nomBatiment) from Lesbatiments;
 Select count(distinct NomBat) from InilogementsInit;
 
-
 /*LesChambres --> valide*/
 INSERT INTO LesChambres (numChambre,nomBatiment, capacite)
     SELECT DISTINCT NLOGEMENT,NOMBAT,CAPACITE
@@ -57,7 +56,6 @@ where nequipe is not null;
 select count(*) from IniEpreuves;
 select count(*) from lesEpreuves;
 
-
 /*LesEpreuvesIndividuelles*/
 select count(*) from IniEpreuves where forme='individuelle';
 select count(*) from lesEpreuvesIndividuelles;
@@ -74,6 +72,19 @@ select count(*) from lesParticipations where idParticipant>1000;
 select count(*) from IniInscriptionsEquipes where nepreuve is not null;
 select count(*) from lesParticipations where idParticipant<1000;
 
+/*LesMedailles - sportifs*/
+select count(*)
+from IniResultatsSportifs;
+Select count(*)/3
+from LesMedailles
+where idParticipant>1000;
+
+/*LesMedailles - equipes*/
+select count(*)
+from IniResultatsEquipes;
+Select count(*)/3
+from LesMedailles
+where idParticipant<1000;
 /*------------------------------------------------------------------*/
 /*----- Test contraintes d'integrite*/
 
@@ -194,24 +205,75 @@ SELECT count(E.nepreuve)
     ON (I.NEpreuve=E.NEpreuve)
     WHERE (forme<>'par equipe');
 
-/* Les sportifs ne sont inscrit qu'une seule fois à une même épreuve? */
-Select *
-    from select count(nIniInscriptionsSportifs I1
-    on (I1.Nepreuve=I2.Nepreuve)
-    where (I1.nom=I2.nom and I1.prenom=I2.PRENOM); 
-  
+/* Les sportifs ne sont inscrits qu'une seule fois à une même épreuve? */
+Select count(*)
+from (select nepreuve,count(*) as nbI
+        from IniInscriptionsSportifs
+        group by(nom,prenom,Nepreuve))R1
+where nbI>1;
+
+/* Les équipes ne sont inscrites qu'une seule fois à une même épreuve? */
+Select count(*)
+from (select nepreuve,count(*) as nbI
+        from IniInscriptionsEquipes
+        group by(ni,Nepreuve))R1
+where nbI>1;
+
+/* Les sportifs qui recoivent une médaille pour une épreuve sont inscrit à cette épreuve? */  
+Select I.nom, I.prenom, I.nepreuve
+from IniInscriptionsSportifs I
+LEFT OUTER join IniResultatsSportifs R
+on ((I.nom=R.nomOr and I.prenom=R.prenomOr) or (I.nom=R.nomAr and I.prenom=R.prenomAr) or (I.nom=R.nomBr and I.prenom=R.prenomBr))
+    minus
+select nom, prenom, nepreuve
+from iniInscriptionsSportifs;
+
+/* Les equipes qui recoivent une médaille pour une épreuve sont inscrit à cette épreuve? */  
+Select E.ni,E.nepreuve
+from IniInscriptionsEquipes E
+LEFT OUTER join IniResultatsEquipes R
+on (E.NI=R.Gold or E.Ni=R.Silver or E.ni=R.bronze)
+    minus
+select ni, nepreuve
+from iniInscriptionsEquipes;
+
+
+/* Les sportifs qui recoivent une médaille pour une épreuve donnée sont distinct deux à deux? */ 
+select count(*)
+from IniResultatsSportifs R1
+join IniResultatsSportifs R2
+on (R1.Nepreuve=R2.nepreuve)
+where((R1.nomOr=R2.nomAr and R1.prenomOr=R2.prenomAr) or (R1.nomAr=R2.nomBr and R1.prenomAr=R2.prenomBr) or (R1.nomBr=R2.nomOr and R1.prenomBr=R2.prenomOr));
+
+/* Les sportifs qui recoivent une médaille pour une épreuve donnée sont distinct deux à deux? */ 
+select count(*)
+from IniResultatsEquipes R1
+join IniResultatsEquipes R2
+on (R1.Nepreuve=R2.nepreuve)
+where(R1.Gold=R2.Silver or R1.Gold=R2.Bronze or R1.silver=R2.bronze);
+
+/* Une seule médaille de chaque valeur est attribuée pour une épreuve individuelle */ 
+select count(nepreuve)from IniResultatsSportifs;
+select count(distinct nepreuve) from IniResultatsSportifs;
+
+/* Une seule médaille de chaque valeur est attribuée pour une épreuve par equipe */ 
+select count(nepreuve)from IniResultatsEquipes;
+select count(distinct nepreuve) from IniResultatsEquipes;
+
 
 /*---------------------------------------------------------------------------*/
 /* ----- Recuperation des donnees exclues lors du chargement dans nos tables */ 
 
+/* Les sportifs dans IniSportifsEq pour lesquels l'équipe n'est pas renseignée*/
 SELECT nom, prenom,pays,categorie,datenais,nequipe
 FROM iniSportifsEq
 WHERE Nequipe is null
 ORDER BY PAYS, NOM;
 
-Select *
-from IniLogementsInit
-where (Nlogement=104 or nlogement=105 or nlogement=211)
-order by nlogement;
-
+/* Les épreuves pour lesquelles la catégorie n'est pas renseignée*/
 select * from iniEpreuves where categorie is null;
+
+/* Les sportifs dans IniInscriptionsSportifs pour lesquels l épreuve n'est pas renseignée */
+SELECT *
+FROM IniInscriptionsSportifs
+WHERE nEpreuve is null;

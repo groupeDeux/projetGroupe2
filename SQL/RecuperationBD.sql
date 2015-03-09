@@ -86,7 +86,7 @@ INSERT INTO LesEpreuvesParEquipe(idEpreuve)
 
 
 /*LesParticipations*/
-/* participations sportifs (que si nepreuve non null)*/
+/* participations-sportifs (que si nepreuve non null)*/
 INSERT INTO LesParticipations(idEpreuve,idParticipant)
     SELECT nepreuve,NS
     FROM IniInscriptionsSportifs I
@@ -94,8 +94,41 @@ INSERT INTO LesParticipations(idEpreuve,idParticipant)
     ON(I.nom=S.nom and I.prenom=S.prenom)
     WHERE nEpreuve is not null;
 
-/* participations equipe (que si nepreuve non null)*/
+/* participations-equipe (que si nepreuve non null)*/
 INSERT INTO LesParticipations(idEpreuve,idParticipant)
     SELECT nepreuve,Ni
     FROM IniInscriptionsEquipes
     WHERE nEpreuve is not null;
+
+/*LesMedailles - Equipes*/
+INSERT INTO LesMedailles(idEpreuve,idParticipant,valeur)
+    SELECT nepreuve,gold,'or'
+    FROM IniResultatsEquipes;
+
+INSERT INTO LesMedailles(idEpreuve,idParticipant,valeur)
+    SELECT nepreuve,silver,'argent'
+    FROM IniResultatsEquipes;
+
+INSERT INTO LesMedailles(idEpreuve,idParticipant,valeur)
+    SELECT nepreuve,bronze,'bronze'
+    FROM IniResultatsEquipes;
+
+
+/*LesMedailles - Sportifs*/
+INSERT INTO LesMedailles(idEpreuve,idParticipant,valeur)
+    SELECT nEpreuve,NS,'or'
+    FROM IniResultatsSportifs R
+    JOIN IniSportifs S
+    ON (R.nomOr=S.nom and R.prenomOr=S.prenom);
+
+INSERT INTO LesMedailles(idEpreuve,idParticipant,valeur)
+    SELECT nEpreuve,NS,'argent'
+    FROM IniResultatsSportifs R
+    JOIN IniSportifs S
+    ON (R.nomAr=S.nom and R.prenomAr=S.prenom);
+
+INSERT INTO LesMedailles(idEpreuve,idParticipant,valeur)
+    SELECT nEpreuve,NS,'bronze'
+    FROM IniResultatsSportifs R
+    JOIN IniSportifs S
+    ON (R.nomBr=S.nom and R.prenomBr=S.prenom);
