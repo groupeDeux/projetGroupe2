@@ -21,7 +21,7 @@ Constraint LEpInd_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 
 CREATE TABLE LesEpreuvesParEquipe (
 idEpreuve INTEGER,
-nbPersonneFixe INTEGER NOT NULL,
+nbPersonneFixe INTEGER,
 Constraint LEpEq_PK PRIMARY KEY (idEpreuve),
 Constraint LEpEq_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve)
 ); 
