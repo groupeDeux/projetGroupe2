@@ -60,7 +60,7 @@ Constraint LTiVid_FK1 FOREIGN KEY (idTicketVideo) REFERENCES LesTickets(idTicket
 CREATE VIEW viewEpreuve as
     SELECT idEpreuve,nomEpreuve,nomDiscipline,categorie, dateDebut, dateFin, urlVideo,tarif,nbDePlace,count(idBillet) as nbDePlaceAchetées
     FROM LesEpreuves 
-    JOIN LesTickets using (idEpreuve)
-    JOIN LesBillets on (idBillet=idTicket) 
+    LEFT  OUTER JOIN LesTickets using (idEpreuve)
+    LEFT OUTER JOIN LesBillets on (idBillet=idTicket) 
     GROUP BY (idEpreuve,nomEpreuve,nomDiscipline,categorie, dateDebut, dateFin, urlVideo,tarif,nbDePlace) ; 
 
