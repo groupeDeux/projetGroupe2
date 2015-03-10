@@ -37,14 +37,12 @@ select count(idParticipant) from lesParticipants where (idParticipant<1000);
 /*LesSportifs*/
 select count(*) from lesSportifs;
 select count(*) from IniSportifs where categorie is not null;
- 
 
 /*LesEquipes*/
 select count(*) from lesEquipes;
 select count(distinct nequipe) 
 from IniSportifsEq 
 where nequipe is not null; 
-
 
 /*LesConstitutionEquipes*/
 select count(*) from lesConstitutionsEquipe;
@@ -109,18 +107,6 @@ Select count(*)
 from IniSportifs 
 where categorie is null;
 
-/* Les Sportifs de IniSportifsEq sont tous associes a une equipe?*/
-select count(*) 
-from iniSportifsEq 
-where Nequipe is null;
-
-/* Les Sportifs d'une meme equipe sont du meme pays? */
-select count(Nequipe) 
-from IniSportifsEq S1
-join IniSportifsEq S2
-using (Nequipe)
-where (S1.pays <> S2.pays);
-
 /* Les Sportifs d'une meme chambre sont de meme genre? */
 select count(S1.NS) 
 from IniLogementsInit L1
@@ -130,6 +116,14 @@ join IniSportifs S2
 using(nom,prenom)
 where (S1.categorie<>S2.categorie);
 
+/* Les Sportifs d'une meme chambre sont du meme pays? */
+select count(S1.NS) 
+from IniLogementsInit L1
+join IniSportifs S1
+using (nom,prenom)
+join IniSportifs S2
+using(nom,prenom)
+where (S1.pays<>S2.pays);
 
 /* Le nombre de sportifs dans une chambre est inferieur a la capacite de celle-ci? */
 Select NLogement,nbPersonnes,capacite
@@ -146,6 +140,27 @@ from IniLogementsInit L1
 join IniLogementsInit L2
 on (L1.nom=L2.nom and L1.prenom=L2.prenom)
 where (L1.Nlogement<>L2.nLogement);
+
+
+/* Les Sportifs de IniSportifsEq sont tous associes a une equipe?*/
+select count(*) 
+from iniSportifsEq 
+where Nequipe is null;
+
+/* Les Equipes non vides contiennent au moins deux sportifs ?*/
+select count(*)
+from (select count(*) as nbInscrits
+    from iniSportifsEq 
+    where Nequipe is not null
+    group by Nequipe)R1
+where nbInscrits<2;
+
+/* Les Sportifs d'une meme equipe sont du meme pays? */
+select count(Nequipe) 
+from IniSportifsEq S1
+join IniSportifsEq S2
+using (Nequipe)
+where (S1.pays <> S2.pays);
 
 
 /*NEpreuves est clé?*/
@@ -219,6 +234,28 @@ from (select nepreuve,count(*) as nbI
         group by(ni,Nepreuve))R1
 where nbI>1;
 
+/* Lorsque NBS est non null le nombre de sportifs participant à cette épreuve est le meme? */
+
+select count(*)
+from IniEpreuves Epreuves
+join
+    (Select count(*) as NbInscritEquipe, Ep.NEPREUVE, S.NEQUIPE
+    from IniEpreuves Ep
+    join IniInscriptionsEquipes Eq
+    on (Ep.NEPREUVE=Eq.Nepreuve)
+    join IniSportifsEq S
+    on (S.Nequipe=Eq.Ni)
+    where NBS is not null
+    group by S.Nequipe, Ep.Nepreuve)R1
+on(R1.Nepreuve=Epreuves.Nepreuve)
+where NbInscritEquipe <> NBS;
+
+select count (*)
+from IniEpreuves E
+join IniInscriptionsEquipes I
+on (E.nepreuve=I.nepreuve)
+where nBS is not null;
+
 /* Les sportifs qui recoivent une médaille pour une épreuve sont inscrit à cette épreuve? */  
 Select I.nom, I.prenom, I.nepreuve
 from IniInscriptionsSportifs I
@@ -227,6 +264,7 @@ on ((I.nom=R.nomOr and I.prenom=R.prenomOr) or (I.nom=R.nomAr and I.prenom=R.pre
     minus
 select nom, prenom, nepreuve
 from iniInscriptionsSportifs;
+
 
 /* Les equipes qui recoivent une médaille pour une épreuve sont inscrit à cette épreuve? */  
 Select E.ni,E.nepreuve
@@ -277,3 +315,28 @@ select * from iniEpreuves where categorie is null;
 SELECT *
 FROM IniInscriptionsSportifs
 WHERE nEpreuve is null;
+
+/*Les sportifs dans IniInscriptionSportifs qui ne sont pas inscrits dans IniSportifs*/
+/*--> ils sont cependant inscrits dans IniLogementsInit voir requete suivante*/
+select *
+from
+    (select nom, prenom
+    from IniInscriptionsSportifs I
+        minus
+    select nom, prenom
+    from INiSportifs S)R1
+join IniInscriptionsSportifs
+using(nom,prenom);
+
+/*Les sportifs dans IniInscriptionSportifs qui ne sont pas inscrits dans IniLogementInit*/
+/* On peut les inscrire manuellement dans lesSportifs*/
+select *
+from
+    (select nom, prenom
+    from IniInscriptionsSportifs I
+        minus
+    select nom, prenom
+    from INiLogementsInit L)R1
+    join IniInscriptionsSportifs
+using(nom,prenom);
+				

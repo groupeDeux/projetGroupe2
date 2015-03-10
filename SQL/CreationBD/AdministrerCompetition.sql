@@ -81,16 +81,6 @@ Constraint CEq_FK1 FOREIGN KEY (idEquipe) REFERENCES LesEquipes(idEquipe),
 Constraint CEq_FK2 FOREIGN KEY (idSportif) REFERENCES LesSportifs(idSportif)
 ); 
 
-CREATE TABLE LesMedailles (
-idEpreuve INTEGER,
-idParticipant INTEGER,
-valeur VARCHAR(30) NOT NULL,
-Constraint LMe_PK PRIMARY KEY (idEpreuve, idParticipant),
-Constraint LMe_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve),
-Constraint LMe_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParticipant),
-Constraint LMe_FK3 FOREIGN KEY (idParticipant,idEpreuve) REFERENCES LesParticipations(idParticipant,idEpreuve)
-Constraint LMe_C1 UNIQUE (idEpreuve, valeur)
-);
 
 CREATE TABLE LesParticipations (
 idEpreuve INTEGER,
@@ -98,6 +88,17 @@ idParticipant INTEGER,
 Constraint Pa_PK PRIMARY KEY (idEpreuve, idParticipant),
 Constraint Pa_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve),
 Constraint Pa_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParticipant)
+);
+
+CREATE TABLE LesMedailles (
+idEpreuve INTEGER,
+idParticipant INTEGER,
+valeur VARCHAR(30) NOT NULL,
+Constraint LMe_PK PRIMARY KEY (idEpreuve, idParticipant),
+Constraint LMe_FK1 FOREIGN KEY (idEpreuve) REFERENCES LesEpreuves(idEpreuve),
+Constraint LMe_FK2 FOREIGN KEY (idParticipant) REFERENCES LesParticipants(idParticipant),
+Constraint LMe_FK3 FOREIGN KEY (idParticipant,idEpreuve) REFERENCES LesParticipations(idParticipant,idEpreuve),
+Constraint LMe_C1 UNIQUE (idEpreuve, valeur)
 );
 
 /**Creation des views**/

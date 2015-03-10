@@ -13,6 +13,32 @@ INSERT INTO lesParticipants(idParticipant,pays)
     SELECT NS,pays
     FROM INISPORTIFS; 
 
+
+/*---------- En attente données correctes pour les dates de naissances ----
+/*LesParticipants - Sportifs
+Présents dans IniInscriptionsSportifs et IniLogementsInit et pas dans IniSportifs*/
+
+/*recup données*/
+select nom, prenom, I2.datenais, I2.categorie, L.nLogement, L.nombat
+from 
+    (select nom, prenom
+    from IniInscriptionsSportifs I
+        minus
+    select nom, prenom
+    from INiSportifs S)R1
+join IniInscriptionsSportifs I2
+using(nom,prenom)
+join IniLogementsInit L
+using(nom,prenom);
+/* max id de la tables les Sportifs pour connaitre l'identifiant à donner*/
+Select max(idSportif)
+from LesSportifs;
+/* insert n-uplet par n-uplet avec info requete et max(id)*/
+INSERT INTO LesSportifs 
+VALUES (1309,'GRENIER','Thierry','2071-10-15 00:00:00.000','masculin','null','102','Rembrandt');
+/*-----------------------------------------------------------------------------------------------*/
+
+
 /*LesParticipants - Equipe*/
 INSERT INTO lesParticipants(idParticipant,pays)
     SELECT DISTINCT (NEquipe),pays
@@ -77,20 +103,17 @@ INSERT INTO LesEpreuves(idEpreuve,nomEpreuve,nomDiscipline,categorie,dateDebut,d
     FROM IniEpreuves
     WHERE categorie is null;
 
-
 /*LesEpreuvesIndividuelles*/        
 INSERT INTO LesEpreuvesIndividuelles(idEpreuve)
     SELECT nepreuve 
     FROM iniEpreuves
     WHERE (forme='individuelle');
 
-
 /*LesEpreuvesParEquipe*/
-INSERT INTO LesEpreuvesParEquipe(idEpreuve)
-    SELECT nepreuve 
+INSERT INTO LesEpreuvesParEquipe(idEpreuve,nbPersonneFixe)
+    SELECT nepreuve, NBS
     FROM iniEpreuves
-    WHERE (forme='par equipe');
-
+    WHERE ((forme='par equipe') and NBS is not null);
 
 /*LesParticipations*/
 /* participations-sportifs (que si nepreuve non null)*/
