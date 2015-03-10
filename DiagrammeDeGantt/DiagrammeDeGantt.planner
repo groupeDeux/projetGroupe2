@@ -81,7 +81,7 @@
       <task id="14" name="DaseDeDonneTunelSSH" note="" work="14400" start="20150226T000000Z" end="20150226T110640Z" work-start="20150226T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150226T000000Z"/>
       </task>
-      <task id="15" name="DiapoAudit1" note="" work="37800" start="20150227T000000Z" end="20150302T120000Z" work-start="20150227T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="15" name="DiapoAudit1" note="" work="37800" start="20150227T000000Z" end="20150302T120000Z" work-start="20150227T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150227T000000Z"/>
       </task>
       <task id="16" name="PrepaLivraison" note="" work="49950" start="20150227T150000Z" end="20150227T173000Z" work-start="20150227T150000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
@@ -99,7 +99,7 @@
           <predecessor id="1" predecessor-id="16" type="FS"/>
         </predecessors>
       </task>
-      <task id="18" name="PrepaAudit1" note="" work="118800" duration="19800" start="20150302T000000Z" end="20150302T153000Z" work-start="20150302T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+      <task id="18" name="PrepaAudit1" note="" work="118800" duration="19800" start="20150302T000000Z" end="20150302T153000Z" work-start="20150302T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-duration">
         <constraint type="start-no-earlier-than" time="20150302T000000Z"/>
       </task>
       <task id="19" name="Audit1" note="" work="0" start="20150302T153000Z" end="20150302T153000Z" work-start="20150302T153000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
@@ -107,86 +107,83 @@
           <predecessor id="1" predecessor-id="18" type="FS"/>
         </predecessors>
       </task>
-      <task id="20" name="DebrifAudit + RepartitionTache" note="" work="43200" start="20150302T153000Z" end="20150302T173000Z" work-start="20150302T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="20" name="DebrifAudit + RepartitionTache" note="" work="43200" start="20150302T153000Z" end="20150302T173000Z" work-start="20150302T153000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="19" type="FS"/>
         </predecessors>
       </task>
     </task>
-    <task id="21" name="TacheAudit2" note="" work="979992" start="20150302T173000Z" end="20150311T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="21" name="TacheAudit2" note="" work="1133784" start="20150302T173000Z" end="20150311T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <task id="22" name="DaseDeDoon&#xE9;e" note="" work="230634" start="20150302T173000Z" end="20150309T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="23" name="RepriseDiagrammeUML" note="" work="20736" start="20150302T173000Z" end="20150303T120000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="23" name="RepriseDiagrammeUML" note="" work="20736" start="20150302T173000Z" end="20150303T120000Z" work-start="20150303T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="20" type="FS"/>
           </predecessors>
         </task>
-        <task id="24" name="ModelRelationnel" note="" work="81648" start="20150303T120000Z" end="20150304T173000Z" work-start="20150303T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="24" name="ModelRelationnel" note="" work="81648" start="20150303T120000Z" end="20150304T173000Z" work-start="20150303T120000Z" percent-complete="98" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="23" type="FS"/>
           </predecessors>
         </task>
-        <task id="25" name="CreationBD" note="" work="26190" start="20150304T173000Z" end="20150305T173000Z" work-start="20150305T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="25" name="CreationBD" note="" work="26190" start="20150304T173000Z" end="20150305T173000Z" work-start="20150305T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="24" type="FS"/>
           </predecessors>
         </task>
-        <task id="26" name="TansfertAncieneBD" note="" work="102060" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="26" name="TansfertAncieneBD" note="" work="102060" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="25" type="FS"/>
           </predecessors>
         </task>
       </task>
-      <task id="27" name="CreerCompetition" note="" work="210780" start="20150303T120000Z" end="20150309T173000Z" work-start="20150303T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="28" name="views" note="" work="51840" start="20150304T173000Z" end="20150305T173000Z" work-start="20150305T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="27" name="ConstituerEquipe" note="" work="314460" start="20150303T000000Z" end="20150309T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="28" name="views" note="" work="155520" start="20150303T000000Z" end="20150305T173000Z" work-start="20150303T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <constraint type="start-no-earlier-than" time="20150303T000000Z"/>
-          <predecessors>
-            <predecessor id="1" predecessor-id="33" type="FS"/>
-          </predecessors>
         </task>
-        <task id="29" name="Model" note="" work="69300" start="20150303T120000Z" end="20150305T171500Z" work-start="20150303T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="29" name="Model" note="" work="69300" start="20150303T120000Z" end="20150305T171500Z" work-start="20150303T120000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="23" type="FS"/>
           </predecessors>
         </task>
-        <task id="30" name="DataAccessObjets" note="" work="50760" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="30" name="DataAccessObjets" note="" work="50760" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="25" type="FS"/>
             <predecessor id="1" predecessor-id="29" type="FS"/>
           </predecessors>
         </task>
-        <task id="31" name="Controlers" note="" work="38880" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="31" name="Controlers" note="" work="38880" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="25" type="FS"/>
             <predecessor id="1" predecessor-id="29" type="FS"/>
           </predecessors>
         </task>
       </task>
-      <task id="32" name="InscriptionDelegation" note="" work="262728" start="20150302T173000Z" end="20150309T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="33" name="Views" note="" work="103680" start="20150302T173000Z" end="20150304T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="32" name="ConsulterEpreuve" note="" work="312840" start="20150302T173000Z" end="20150309T173000Z" work-start="20150303T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="33" name="Views" note="" work="153792" start="20150302T173000Z" end="20150305T171500Z" work-start="20150303T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="20" type="FS"/>
           </predecessors>
         </task>
-        <task id="34" name="Model" note="" work="51948" start="20150303T120000Z" end="20150305T173000Z" work-start="20150303T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="34" name="Model" note="" work="51948" start="20150303T120000Z" end="20150305T173000Z" work-start="20150303T120000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="23" type="FS"/>
           </predecessors>
         </task>
-        <task id="35" name="DataAccessObject" note="" work="53100" start="20150305T173000Z" end="20150309T171500Z" work-start="20150306T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="35" name="DataAccessObject" note="" work="53100" start="20150305T173000Z" end="20150309T171500Z" work-start="20150306T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="34" type="FS"/>
             <predecessor id="1" predecessor-id="33" type="FS"/>
             <predecessor id="1" predecessor-id="25" type="FS"/>
           </predecessors>
         </task>
-        <task id="36" name="Controlers" note="" work="54000" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="36" name="Controlers" note="" work="54000" start="20150305T173000Z" end="20150309T173000Z" work-start="20150306T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <predecessors>
             <predecessor id="1" predecessor-id="35" type="SS"/>
             <predecessor id="1" predecessor-id="33" type="FS"/>
           </predecessors>
         </task>
       </task>
-      <task id="37" name="Integration" note="" work="149850" start="20150309T173000Z" end="20150310T173000Z" work-start="20150310T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="37" name="Integration" note="" work="149850" start="20150309T173000Z" end="20150310T173000Z" work-start="20150310T090000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="32" type="FS"/>
           <predecessor id="1" predecessor-id="22" type="FS"/>
@@ -316,19 +313,19 @@
       </task>
     </task>
   </tasks>
-  <resource-groups default_group="1">
-    <group id="1" name="Developpeur" admin-name="" admin-phone="" admin-email=""/>
-    <group id="2" name="GardienDuTemps" admin-name="" admin-phone="" admin-email=""/>
-    <group id="3" name="ResponsableQualit&#xE9;" admin-name="" admin-phone="" admin-email=""/>
-    <group id="4" name="ChefDeProjet" admin-name="" admin-phone="" admin-email=""/>
+  <resource-groups default_group="4">
+    <group id="1" name="ChefDeProjet" admin-name="" admin-phone="" admin-email=""/>
+    <group id="2" name="ResponsableQualit&#xE9;" admin-name="" admin-phone="" admin-email=""/>
+    <group id="3" name="GardienDuTemps" admin-name="" admin-phone="" admin-email=""/>
+    <group id="4" name="Developpeur" admin-name="" admin-phone="" admin-email=""/>
   </resource-groups>
   <resources>
-    <resource group="4" id="1" name="Vianney DANJOU" short-name="VDU" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="1" id="2" name="Gaetan BUSATO" short-name="GBO" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="1" id="3" name="Guillaume CONTE " short-name="GCE" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="2" id="4" name="Agathe FURET" short-name="AFT" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="3" id="5" name=" Arbia MAGOURI" short-name="AMI" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="1" id="6" name="Andreea OPRISOR " short-name="AOR" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="1" name="Vianney DANJOU" short-name="VDU" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="2" name="Gaetan BUSATO" short-name="GBO" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="3" name="Guillaume CONTE " short-name="GCE" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="3" id="4" name="Agathe FURET" short-name="AFT" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="5" name=" Arbia MAGOURI" short-name="AMI" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="6" name="Andreea OPRISOR " short-name="AOR" type="1" units="0" email="" note="" std-rate="0"/>
   </resources>
   <allocations>
     <allocation task-id="45" resource-id="1" units="92"/>
