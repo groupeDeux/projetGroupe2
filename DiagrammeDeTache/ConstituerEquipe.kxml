@@ -20,10 +20,10 @@
         <task-effetsdebord>void</task-effetsdebord>
         <task-iteration>[1]</task-iteration>
         <point classkmad="tache.Point" idkmad="K3">
-            <point-x>746</point-x>
-            <point-y>19</point-y>
+            <point-x>484</point-x>
+            <point-y>0</point-y>
         </point>
-        <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K14 K17 K63 " idkmad="K7">
+        <task classkmad="tache.Tache" id-task-point="K6" id-task-subtasks-list="K14 K17 K110 K104 K63 " idkmad="K7">
             <task-name>CreerEquipe</task-name>
             <task-numero>1</task-numero>
             <task-observation/>
@@ -37,8 +37,8 @@
             <task-iteration>[1]</task-iteration>
             <task-descriptioniteration>Tant que la l'utilisateur le souhaite</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K6">
-                <point-x>204</point-x>
-                <point-y>178</point-y>
+                <point-x>341</point-x>
+                <point-y>145</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K13" idkmad="K14">
                 <task-name>SaisirDelegation</task-name>
@@ -53,12 +53,12 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K13">
-                    <point-x>4</point-x>
-                    <point-y>322</point-y>
+                    <point-x>0</point-x>
+                    <point-y>290</point-y>
                 </point>
             </task>
             <task classkmad="tache.Tache" id-task-point="K16" idkmad="K17">
-                <task-name>SaisirType</task-name>
+                <task-name>SaisirCategorie</task-name>
                 <task-numero>1.2</task-numero>
                 <task-observation/>
                 <task-executant>INT</task-executant>
@@ -70,13 +70,83 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K16">
-                    <point-x>189</point-x>
-                    <point-y>321</point-y>
+                    <point-x>168</point-x>
+                    <point-y>290</point-y>
                 </point>
+            </task>
+            <task classkmad="tache.Tache" id-task-point="K109" idkmad="K110">
+                <task-name>SaisirNom</task-name>
+                <task-numero>1.3</task-numero>
+                <task-observation/>
+                <task-executant>INT</task-executant>
+                <task-modality>COGN</task-modality>
+                <task-optional>true</task-optional>
+                <task-interruptible>false</task-interruptible>
+                <task-decomposition>LEAF</task-decomposition>
+                <task-precondition>true</task-precondition>
+                <task-effetsdebord>void</task-effetsdebord>
+                <task-iteration>[1]</task-iteration>
+                <point classkmad="tache.Point" idkmad="K109">
+                    <point-x>336</point-x>
+                    <point-y>290</point-y>
+                </point>
+            </task>
+            <task classkmad="tache.Tache" id-task-point="K103" id-task-subtasks-list="K106 K108 " idkmad="K104">
+                <task-name>ModifierMembreEquipe</task-name>
+                <task-numero>1.4</task-numero>
+                <task-observation/>
+                <task-executant>ABS</task-executant>
+                <task-modality>COGN</task-modality>
+                <task-optional>false</task-optional>
+                <task-interruptible>false</task-interruptible>
+                <task-decomposition>ALT</task-decomposition>
+                <task-precondition>true</task-precondition>
+                <task-descriptionprecondition>Menbre dans equipe</task-descriptionprecondition>
+                <task-effetsdebord>void</task-effetsdebord>
+                <task-iteration>[1]</task-iteration>
+                <task-descriptioniteration>tant que l'utilisateur le souhaite</task-descriptioniteration>
+                <point classkmad="tache.Point" idkmad="K103">
+                    <point-x>472</point-x>
+                    <point-y>290</point-y>
+                </point>
+                <task classkmad="tache.Tache" id-task-point="K105" idkmad="K106">
+                    <task-name>SupprimerMembre</task-name>
+                    <task-numero>1.4.1</task-numero>
+                    <task-observation/>
+                    <task-executant>INT</task-executant>
+                    <task-modality>COGN</task-modality>
+                    <task-optional>false</task-optional>
+                    <task-interruptible>false</task-interruptible>
+                    <task-decomposition>LEAF</task-decomposition>
+                    <task-precondition>true</task-precondition>
+                    <task-effetsdebord>void</task-effetsdebord>
+                    <task-iteration>[1]</task-iteration>
+                    <point classkmad="tache.Point" idkmad="K105">
+                        <point-x>268</point-x>
+                        <point-y>435</point-y>
+                    </point>
+                </task>
+                <task classkmad="tache.Tache" id-task-point="K107" idkmad="K108">
+                    <task-name>AjouterMembre</task-name>
+                    <task-numero>1.4.2</task-numero>
+                    <task-observation/>
+                    <task-executant>INT</task-executant>
+                    <task-modality>COGN</task-modality>
+                    <task-optional>false</task-optional>
+                    <task-interruptible>false</task-interruptible>
+                    <task-decomposition>LEAF</task-decomposition>
+                    <task-precondition>true</task-precondition>
+                    <task-effetsdebord>void</task-effetsdebord>
+                    <task-iteration>[1]</task-iteration>
+                    <point classkmad="tache.Point" idkmad="K107">
+                        <point-x>442</point-x>
+                        <point-y>435</point-y>
+                    </point>
+                </task>
             </task>
             <task classkmad="tache.Tache" id-task-point="K62" idkmad="K63">
                 <task-name>AttribuerID</task-name>
-                <task-numero>1.3</task-numero>
+                <task-numero>1.5</task-numero>
                 <task-observation/>
                 <task-executant>SYS</task-executant>
                 <task-modality>COGN</task-modality>
@@ -84,11 +154,12 @@
                 <task-interruptible>false</task-interruptible>
                 <task-decomposition>LEAF</task-decomposition>
                 <task-precondition>true</task-precondition>
+                <task-descriptionprecondition>Au moins deux menbre</task-descriptionprecondition>
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K62">
-                    <point-x>333</point-x>
-                    <point-y>321</point-y>
+                    <point-x>674</point-x>
+                    <point-y>290</point-y>
                 </point>
             </task>
         </task>
@@ -107,8 +178,8 @@
             <task-iteration>[1]</task-iteration>
             <task-descriptioniteration>Tant que la l'utilisateur le souhaite</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K9">
-                <point-x>668</point-x>
-                <point-y>178</point-y>
+                <point-x>492</point-x>
+                <point-y>145</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K18" id-task-subtasks-list="K22 K25 " idkmad="K19">
                 <task-name>SelectionnerEquipe</task-name>
@@ -123,8 +194,8 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K18">
-                    <point-x>523</point-x>
-                    <point-y>321</point-y>
+                    <point-x>183</point-x>
+                    <point-y>290</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K21" idkmad="K22">
                     <task-name>SelectionnerNationalite</task-name>
@@ -139,8 +210,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K21">
-                        <point-x>361</point-x>
-                        <point-y>476</point-y>
+                        <point-x>71</point-x>
+                        <point-y>435</point-y>
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K24" idkmad="K25">
@@ -156,8 +227,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K24">
-                        <point-x>544</point-x>
-                        <point-y>476</point-y>
+                        <point-x>277</point-x>
+                        <point-y>435</point-y>
                     </point>
                 </task>
             </task>
@@ -176,8 +247,8 @@
                 <task-iteration>[1]</task-iteration>
                 <task-descriptioniteration>tant que l'utilisateur le souhaite</task-descriptioniteration>
                 <point classkmad="tache.Point" idkmad="K65">
-                    <point-x>771</point-x>
-                    <point-y>321</point-y>
+                    <point-x>640</point-x>
+                    <point-y>290</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K71" id-task-subtasks-list="K27 K74 " idkmad="K72">
                     <task-name>SupprimerMembre</task-name>
@@ -192,8 +263,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K71">
-                        <point-x>721</point-x>
-                        <point-y>476</point-y>
+                        <point-x>471</point-x>
+                        <point-y>435</point-y>
                     </point>
                     <task classkmad="tache.Tache" id-task-point="K26" idkmad="K27">
                         <task-name>SelectionnerMembre</task-name>
@@ -208,8 +279,8 @@
                         <task-effetsdebord>void</task-effetsdebord>
                         <task-iteration>[1]</task-iteration>
                         <point classkmad="tache.Point" idkmad="K26">
-                            <point-x>511</point-x>
-                            <point-y>611</point-y>
+                            <point-x>374</point-x>
+                            <point-y>580</point-y>
                         </point>
                     </task>
                     <task classkmad="tache.Tache" id-task-point="K73" idkmad="K74">
@@ -225,8 +296,8 @@
                         <task-effetsdebord>void</task-effetsdebord>
                         <task-iteration>[1]</task-iteration>
                         <point classkmad="tache.Point" idkmad="K73">
-                            <point-x>697</point-x>
-                            <point-y>611</point-y>
+                            <point-x>562</point-x>
+                            <point-y>580</point-y>
                         </point>
                     </task>
                 </task>
@@ -243,8 +314,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K68">
-                        <point-x>973</point-x>
-                        <point-y>466</point-y>
+                        <point-x>848</point-x>
+                        <point-y>435</point-y>
                     </point>
                     <task classkmad="tache.Tache" id-task-point="K76" idkmad="K77">
                         <task-name>SelectionnerSportif</task-name>
@@ -259,8 +330,8 @@
                         <task-effetsdebord>void</task-effetsdebord>
                         <task-iteration>[1]</task-iteration>
                         <point classkmad="tache.Point" idkmad="K76">
-                            <point-x>859</point-x>
-                            <point-y>611</point-y>
+                            <point-x>735</point-x>
+                            <point-y>580</point-y>
                         </point>
                     </task>
                     <task classkmad="tache.Tache" id-task-point="K78" idkmad="K79">
@@ -276,8 +347,8 @@
                         <task-effetsdebord>void</task-effetsdebord>
                         <task-iteration>[1]</task-iteration>
                         <point classkmad="tache.Point" idkmad="K78">
-                            <point-x>1039</point-x>
-                            <point-y>611</point-y>
+                            <point-x>915</point-x>
+                            <point-y>580</point-y>
                         </point>
                     </task>
                 </task>
@@ -298,8 +369,8 @@
             <task-iteration>[1]</task-iteration>
             <task-descriptioniteration>Tant que la l'utilisateur le souhaite</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K11">
-                <point-x>1149</point-x>
-                <point-y>178</point-y>
+                <point-x>644</point-x>
+                <point-y>145</point-y>
             </point>
             <task classkmad="tache.Tache" id-task-point="K41" id-task-subtasks-list="K40 K38 " idkmad="K42">
                 <task-name>SelectionnerEquipe</task-name>
@@ -314,8 +385,8 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K41">
-                    <point-x>1089</point-x>
-                    <point-y>326</point-y>
+                    <point-x>485</point-x>
+                    <point-y>290</point-y>
                 </point>
                 <task classkmad="tache.Tache" id-task-point="K39" idkmad="K40">
                     <task-name>SelectionnerNationalité</task-name>
@@ -330,8 +401,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K39">
-                        <point-x>1329</point-x>
-                        <point-y>476</point-y>
+                        <point-x>373</point-x>
+                        <point-y>435</point-y>
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K37" idkmad="K38">
@@ -347,8 +418,8 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K37">
-                        <point-x>1557</point-x>
-                        <point-y>476</point-y>
+                        <point-x>579</point-x>
+                        <point-y>435</point-y>
                     </point>
                 </task>
             </task>
@@ -365,8 +436,8 @@
                 <task-effetsdebord>void</task-effetsdebord>
                 <task-iteration>[1]</task-iteration>
                 <point classkmad="tache.Point" idkmad="K43">
-                    <point-x>1300</point-x>
-                    <point-y>326</point-y>
+                    <point-x>667</point-x>
+                    <point-y>290</point-y>
                 </point>
             </task>
         </task>
