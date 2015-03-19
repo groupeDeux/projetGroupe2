@@ -70,7 +70,6 @@
             <task-precondition>true</task-precondition>
             <task-effetsdebord>void</task-effetsdebord>
             <task-iteration>[1]</task-iteration>
-            <task-descriptioniteration>tant que l'utilisateur le souhaite</task-descriptioniteration>
             <point classkmad="tache.Point" idkmad="K17">
                 <point-x>459</point-x>
                 <point-y>145</point-y>
@@ -105,12 +104,12 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K12">
-                        <point-x>192</point-x>
+                        <point-x>272</point-x>
                         <point-y>435</point-y>
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K44" idkmad="K45">
-                    <task-name>AttribuerParticipant</task-name>
+                    <task-name>AjouterParticipantSurBd</task-name>
                     <task-numero>3.1.2</task-numero>
                     <task-observation/>
                     <task-executant>SYS</task-executant>
@@ -122,7 +121,7 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K44">
-                        <point-x>398</point-x>
+                        <point-x>558</point-x>
                         <point-y>435</point-y>
                     </point>
                 </task>
@@ -158,12 +157,12 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K27">
-                        <point-x>576</point-x>
+                        <point-x>744</point-x>
                         <point-y>435</point-y>
                     </point>
                 </task>
                 <task classkmad="tache.Tache" id-task-point="K47" idkmad="K48">
-                    <task-name>SupprimerParticipant</task-name>
+                    <task-name>SupprimerParticipantDeBd</task-name>
                     <task-numero>3.2.2</task-numero>
                     <task-observation/>
                     <task-executant>SYS</task-executant>
@@ -175,7 +174,7 @@
                     <task-effetsdebord>void</task-effetsdebord>
                     <task-iteration>[1]</task-iteration>
                     <point classkmad="tache.Point" idkmad="K47">
-                        <point-x>875</point-x>
+                        <point-x>1086</point-x>
                         <point-y>435</point-y>
                     </point>
                 </task>
