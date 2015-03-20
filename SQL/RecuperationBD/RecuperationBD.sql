@@ -18,8 +18,8 @@ INSERT INTO lesParticipants(idParticipant,pays)
 /*LesParticipants - Sportifs
 Présents dans IniInscriptionsSportifs et IniLogementsInit et pas dans IniSportifs*/
 
-/*recup données*/
-select nom, prenom, I2.datenais, I2.categorie, L.nLogement, L.nombat
+/*recup données
+select distinct nom, prenom, I2.datenais, I2.categorie, L.nLogement, L.nombat, I2.pays
 from 
     (select nom, prenom
     from IniInscriptionsSportifs I
@@ -30,12 +30,49 @@ join IniInscriptionsSportifs I2
 using(nom,prenom)
 join IniLogementsInit L
 using(nom,prenom);
-/* max id de la tables les Sportifs pour connaitre l'identifiant à donner*/
-Select max(idSportif)
-from LesSportifs;
+/* max id de la tables les Sportifs pour connaitre l'identifiant à donner
+Select max(idSportif)+1
+from LesSportifs;*/
+
 /* insert n-uplet par n-uplet avec info requete et max(id)*/
+
+INSERT INTO LesParticipants
+VALUES (1309,'Australie');
 INSERT INTO LesSportifs 
-VALUES (1309,'GRENIER','Thierry','2071-10-15 00:00:00.000','masculin','null','102','Rembrandt');
+VALUES (1309,'SIGAUD','Philippe',to_date('1967-02-08','YYYY-MM-DD'),'masculin','null','108','Gaughin');
+INSERT INTO LesParticipants
+VALUES (1310,'Autriche');
+INSERT INTO LesSportifs 
+VALUES (1310,'EVESQUE','Cecile',to_date('1950-04-08','YYYY-MM-DD'),'feminin','null','110','Gaughin');
+INSERT INTO LesParticipants
+VALUES (1311,'Grande Bretagne');
+INSERT INTO LesSportifs 
+VALUES (1311,'PIERRE','Sylvain',to_date('1971-01-18','YYYY-MM-DD'),'masculin','null','104','Rembrandt');
+INSERT INTO LesParticipants
+VALUES (1312,'Hongrie');
+INSERT INTO LesSportifs 
+VALUES (1312,'ROLLAND','Olivier',to_date('1965-04-19','YYYY-MM-DD'),'masculin','null','112','Rembrandt');
+INSERT INTO LesParticipants
+VALUES (1313,'Grande Bretagne');
+INSERT INTO LesSportifs 
+VALUES (1313,'PINARD','Benoit',to_date('1949-03-14','YYYY-MM-DD'),'masculin','null','104','Rembrandt');
+INSERT INTO LesParticipants
+VALUES (1314,'Australie');
+INSERT INTO LesSportifs 
+VALUES (1314,'RASCHI','Pierre',to_date('1967-06-08','YYYY-MM-DD'),'masculin','null','107','Gaughin');
+INSERT INTO LesParticipants
+VALUES (1315,'Grande Bretagne');
+INSERT INTO LesSportifs 
+VALUES (1315,'GRENIER','Thierry',to_date('1971-10-15','YYYY-MM-DD'),'masculin','null','102','Rembrandt');
+INSERT INTO LesParticipants
+VALUES (1316,'Australie');
+INSERT INTO LesSportifs 
+VALUES (1316,'VALTCHEV','Petko',to_date('1966-11-10','YYYY-MM-DD'),'masculin','null','109','Gaughin');
+INSERT INTO LesParticipants
+VALUES (1317,'Hongrie');
+INSERT INTO LesSportifs 
+VALUES (1317,'HERBELIN','Olivier',to_date('1965-02-18','YYYY-MM-DD'),'masculin','null','110','Rembrandt');
+
 /*-----------------------------------------------------------------------------------------------*/
 
 
@@ -93,13 +130,13 @@ INSERT INTO LesConstitutionsEquipe(idEquipe,idSportif)
     WHERE (NEquipe is not null);
 
 /*LesEpreuves*/
-INSERT INTO LesEpreuves(idEpreuve,nomEpreuve,nomDiscipline,categorie,dateDebut,dateFin)
-    SELECT nEpreuve,nomE,discipline,categorie,(dateEpr+(8/24)),(dateEpr+(17/24))
+INSERT INTO LesEpreuves(idEpreuve,nomEpreuve,nomDiscipline,categorie,dateDebut,dateFin,tarif,nbDePlace)
+    SELECT nEpreuve,nomE,discipline,categorie,(dateEpr+(8/24)),(dateEpr+(17/24)),50,200
     FROM IniEpreuves
     WHERE categorie is not null;
 
-INSERT INTO LesEpreuves(idEpreuve,nomEpreuve,nomDiscipline,categorie,dateDebut,dateFin)
-    SELECT nEpreuve,nomE,discipline,'mixte',(dateEpr+(8/24)),(dateEpr+(17/24))
+INSERT INTO LesEpreuves(idEpreuve,nomEpreuve,nomDiscipline,categorie,dateDebut,dateFin, tarif, nbDePlace)
+    SELECT nEpreuve,nomE,discipline,'mixte',(dateEpr+(8/24)),(dateEpr+(17/24)),50,200
     FROM IniEpreuves
     WHERE categorie is null;
 
