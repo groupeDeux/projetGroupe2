@@ -150,7 +150,7 @@ INSERT INTO LesEpreuvesIndividuelles(idEpreuve)
 INSERT INTO LesEpreuvesParEquipe(idEpreuve,nbPersonneFixe)
     SELECT nepreuve, NBS
     FROM iniEpreuves
-    WHERE ((forme='par equipe') and NBS is not null);
+    WHERE (forme='par equipe');
 
 /*LesParticipations*/
 /* participations-sportifs (que si nepreuve non null)*/
